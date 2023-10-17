@@ -11,6 +11,7 @@ Nord screenshot!
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Mako](https://github.com/emersion/mako) notification
 - [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme)
+- [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
 - [Fish shell](https://github.com/fish-shell/fish-shell)
 - [Startship prompt](https://starship.rs/)
 - [nitch](https://github.com/ssleert/nitch)
