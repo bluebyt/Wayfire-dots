@@ -13,7 +13,7 @@ Nord screenshot!
 - [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme)
 - [Fish shell](https://github.com/fish-shell/fish-shell)
 - [Startship prompt](https://starship.rs/)
-- [Neofetch](https://github.com/dylanaraps/neofetch)
+- [nitch](https://github.com/ssleert/nitch)
 
 ## Install steps
 
