@@ -10,7 +10,7 @@ Nord screenshot!
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Mako](https://github.com/emersion/mako) notification
-- [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme)
+- [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme) command: ./install.sh -c dark -l --tweaks nord
 - [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
 - [Fish shell](https://github.com/fish-shell/fish-shell)
 - [Startship prompt](https://starship.rs/)
