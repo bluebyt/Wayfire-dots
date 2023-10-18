@@ -14,6 +14,7 @@ Screenshot!
 - [Fish shell](https://github.com/fish-shell/fish-shell)
 - [Startship prompt](https://starship.rs/)
 - [nitch](https://github.com/ssleert/nitch)
+- [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
 
 ## Install steps
 
