@@ -2,9 +2,8 @@
 Wayfire is a 3D Wayland compositor
 Warning: This installation guide is for my future self. Some steps might not be completed.
 
-Nord screenshot!
-![Screenshot21avril2023](https://user-images.githubusercontent.com/18442224/233592124-38f2bfa1-1e1e-4e5c-a2dc-2e0b5d822613.png)
-
+Screenshot!
+![Screenshot_wayfire](https://github.com/bluebyt/Wayfire-dots/assets/18442224/2eda9c5a-5ff6-4a32-84dc-deb604d36761)
 
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
