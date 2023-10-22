@@ -15,6 +15,8 @@ Screenshot!
 - [Startship prompt](https://starship.rs/)
 - [nitch](https://github.com/ssleert/nitch)
 - [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
+- [Text editor](https://apps.gnome.org/TextEditor/) The new text editor for Gnome.
+- Intall the custom Nord theme. $sudo cp nord.xml /usr/share/gnome-text-editor/styles/ 
 
 ## Install steps
 
