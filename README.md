@@ -16,7 +16,8 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [nitch](https://github.com/ssleert/nitch) Fast system fetch
 - [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
 - [Text editor](https://apps.gnome.org/TextEditor/) The new text editor for Gnome.
-- Install the custom Nord theme. command: $sudo cp nord.xml /usr/share/gnome-text-editor/styles/ 
+- Install the custom Nord theme for text editor. command: $sudo cp nord.xml /usr/share/gnome-text-editor/styles/
+- [grimshot-pv] (https://github.com/ferdiebergado/grimshot-pv) Script with added screenshot preview on the notification
 
 ## Install steps
 
