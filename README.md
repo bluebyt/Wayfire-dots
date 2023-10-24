@@ -12,9 +12,9 @@ Screenshot!
 - [Mako](https://github.com/emersion/mako) notification
 - [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme) command: ./install.sh -c dark -l --tweaks nord
 - [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
-- [Fish shell](https://github.com/fish-shell/fish-shell)
-- [Startship prompt](https://starship.rs/)
-- [nitch](https://github.com/ssleert/nitch)
+- [Fish shell](https://github.com/fish-shell/fish-shell) Command line shell
+- [Startship prompt](https://starship.rs/) Customizable prompt
+- [nitch](https://github.com/ssleert/nitch) Fast system fetch
 - [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
 - [Text editor](https://apps.gnome.org/TextEditor/) The new text editor for Gnome.
 - Install the custom Nord theme. command: $sudo cp nord.xml /usr/share/gnome-text-editor/styles/ 
