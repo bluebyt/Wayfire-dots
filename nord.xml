@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2021 Christian Hergert <chergert@redhat.com>
+                                                                      
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+                                                                      
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+                                                                      
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<style-scheme id="nord" name="Nord" version="1.0">
+  <author>Christian Hergert</author>
+
+  <metadata>
+    <property name="variant">dark</property>
+    <property name="light-variant">nord</property>
+  </metadata>
+
+  <style name="text"                        foreground="#e5e9f0" background="#2e3440"/>
+  <style name="selection"                   background="#81a1c1"/>
+  <style name="search-match"                background="#8fbcbb"/>
+  <style name="cursor"                      foreground="#e5e9f0"/>
+  <style name="current-line"                background="#dfdfe011"/>
+  <style name="current-line-number"         background="#dfdfe011"/>
+  <style name="line-numbers"                foreground="#e5e9f0" background="#2e3440"/>
+  <style name="draw-spaces"                 foreground="#4f535f"/>
+  <style name="background-pattern"          background="3b4252"/>
+  <style name="bracket-match"               background="#4c566a" bold="true"/>
+  <style name="bracket-mismatch"            underline="error" bold="true"/>
+  <style name="right-margin"                foreground="#4c566a" background="#4c566a"/>
+  <style name="map-overlay"                 background="#4c566a"/>
+  <style name="def:string"                  foreground="#bf616a"/>
+  <style name="def:type"                    foreground="#81A1C1" bold="true"/>
+  <style name="def:comment"                 foreground="#7f8c99"/>
+  <style name="def:list-marker"             foreground="#ebcb8b" bold="true"/>
+  <style name="def:heading"                 bold="true"/>
+  <style name="def:identifier"              foreground="#75c2b3"/>
+  <style name="def:preprocessor"            foreground="#8d8e95"/>
+  <style name="def:keyword"                 foreground="#81A1C1" bold="true"/>
+  <style name="def:variable"                foreground="#75c2b3"/>
+  <style name="def:special-constant"        foreground="#d08770" bold="true"/>
+  <style name="def:emphasis"                italic="true"/>
+  <style name="def:strong-emphasis"         italic="true" bold="true"/>
+  <style name="def:net-address"             foreground="#3e8ee3"/>
+  <style name="def:link-destination"        foreground="#3e8ee3"/>
+  <style name="def:link-text"               foreground="#3e8ee3"/>
+  <style name="def:floating-point"          foreground="#ebcb8b"/>
+  <style name="def:decimal"                 foreground="#ebcb8b"/>
+  <style name="def:base-n-integer"          foreground="#ebcb8b"/>
+  <style name="def:boolean"                 foreground="#b48ead"/>
+  <style name="gtk-doc:function-name"       foreground="#a3be8c"/>
+  <style name="gtk-doc:function"            foreground="#a3be8c"/>
+  <style name="gtk-doc:parameter"           bold="true"/>
+  <style name="gtk-doc:constant"            bold="true"/>
+  <style name="gtk-doc:type"                bold="true"/>
+  <style name="gtk-doc:since"               bold="true"/>
+  <style name="gtk-doc:return"              bold="true"/>
+  <style name="gtk-doc:deprecated"          bold="true"/>
+  <style name="gtk-doc:signal-name"         bold="true"/>
+  <style name="gtk-doc:property-name"       bold="true"/>
+
+</style-scheme>
