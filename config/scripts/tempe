@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if the "sensors" program is installed
+if ! command -v sensors &> /dev/null
+then
+    echo "The 'sensors' program is not installed. Please install it first."
+    exit
+fi
+
+# Extract the CPU temperature using the "sensors" program
+cpu_temp=$(sensors | awk '/^Package id 0/{print substr($4,2,2)}')
+
+echo "$cpu_temp"
+

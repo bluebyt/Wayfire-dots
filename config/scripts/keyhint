@@ -1,0 +1,2 @@
+#!/bin/sh
+kitty -T=cheatsheet --hold -e mdcat ~/.config/scripts/cheatsheet.md

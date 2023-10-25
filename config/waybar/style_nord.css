@@ -1,0 +1,234 @@
+* {
+  border: none;
+   /* font-family: DejaVu Sans Mono, "Font Awesome 5 Free Solid";
+      font-family:Iosevka Nerd Font, CaskaydiaCove Nerd Font Mono SemiBold;
+      font-family:CaskaydiaCove Nerd Font Mono SemiBold,"Iosevka Nerd Font";      
+      font-family:Source Code Pro Semibold, "Iosevka Nerd Font";
+      font-family:Ubuntu Mono, "Iosevka Nerd Font";
+      font-family:JetBrains Mono ExtraBold, "Iosevka Nerd Font";               
+    */    
+    font-family:Roboto Mono SemiBold, "Iosevka Nerd Font";
+    font-size: 20px;
+    min-height: 0;
+    /*font-weight: 800; */
+    font-weight: normal;
+}
+/*
+ #waybar {
+  background-color: rgba(18, 21, 29, 0.98); 
+  background: transparent; 
+  background: rgba(0,0,0,0.3);
+  background-color: #2E3440;
+  
+  background: rgba(20, 22, 30, 0.7);
+  border-bottom: 2px solid #1e222a;
+  color: #abb2bf;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+*/
+
+ #waybar {
+    background-color: transparent;
+}
+
+#waybar > box {
+    border-radius: 8px;
+    margin: 8px 8px 8px 8px;
+   /* background-color: rgba(18, 21, 29, 0.98);*/
+    background-color: rgba(20, 22, 30, 0.7); 
+   /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);*/
+    box-shadow: 1 1 3 1px #151515;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+#custom-bluebyt,
+#workspaces,
+#mode,
+#cpu,
+#custom-disk,
+#memory,
+#temperature,
+#custom-wlogout,
+#mpd,
+#clock,
+#custom-pacmanAlt,
+#idle_inhibitor,
+#language,
+#pulseaudio,
+#network,
+#taskbar,
+#custom-cava-internal,
+#custom-uptime,
+#window,
+
+#tray {
+/*  background-color: #3b4252; */
+  padding: 0 5px;
+  margin: 2px 2px 2px 2px;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
+/* background-clip: padding-box;*/ 
+} 
+
+#custom-bluebyt {
+  padding: 0 5px;
+  min-width: 20px;
+  color: #8FBCBB;
+  border-radius: 8px;
+  font-size: 24px;
+}
+
+#workspaces button {
+  padding: 0 9px;
+  min-width: 20px;
+  color: #5e81ac;
+}
+
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+#workspaces button.active {
+  color: #EBCB8B;
+}
+
+#workspaces button.urgent {
+  color: #e06c75;
+}
+
+#cpu {
+  color: #D08770;
+  border-radius: 8px;
+  /*font-weight: bold;*/
+}
+#custom-disk{
+  color: #81A1C1;
+  border-radius: 8px;
+}
+#memory {
+  color: #B48EAD;
+  border-radius: 8px;
+}
+
+#temperature {
+  color: #BF616A;
+  border-radius: 8px;
+}
+
+#temperature.critical {
+  background-color: #e06c75;
+  color: #1e222a;
+  border-radius: 8px;
+}
+
+#mpd{
+  background-color: #8FBCBB;
+  color: #1e222a;
+  border-radius: 8px;
+}
+
+#custom-pacmanAlt{
+  color: #8FBCBB;
+  border-radius: 8px;
+}
+
+#clock {
+  color: #5E81AC;
+  border-radius: 8px;
+}
+
+#idle_inhibitor {
+  color: #abb2bf;
+}
+
+#idle_inhibitor.activated {
+  background-color: #abb2bf;
+  color: #1e222a;
+}
+
+#pulseaudio {
+  color: #EBCB8B;
+  border-radius: 8px;
+}
+
+#pulseaudio.muted {
+  background-color: #EBCB8B;
+  color: #1e222a;
+  border-radius: 8px;
+}
+
+#custom-wlogout {
+  color: #BF616A;
+  border-radius: 8px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+#network {
+    color: #B48EAD;
+    border-radius: 8px;
+}
+
+#network.disconnected {
+    background-color: #B48EAD;
+    color: #1e222a;
+    border-radius: 8px;
+}
+#custom-playerctl {
+    color: #d6d6d6;
+    border-bottom: 3px solid #8dbcf4;
+    border-radius: 8px;
+}
+
+/* #taskbar {
+    border-radius: 4px 4px 4px 4px;
+    padding: 0 1px;
+    margin: 0 0px;
+    color: #ffffff;
+    background-color: #4c566a;
+} */
+
+#taskbar {
+    background-color: #2BD2FF;
+    background-image: linear-gradient(45deg, #b48ead 0%, #5e81ac 52%, #b48ead 90%);
+    border-radius: 8px;
+}
+
+#taskbar button {
+    border-radius: 2px 2px 2px 2px;
+    padding: 0 0 0 1px;
+    margin: 4px 4px;
+    color: #ffffff;
+    background-color: rgba(120,118,117,0.1);
+}
+
+#taskbar button.active {
+    background-color: rgba(108, 122, 137, 1);
+}
+
+#language{
+    color: #EBCB8B;
+    border-radius: 8px;
+}
+
+#custom-uptime {
+    color: #EBCB8B;
+    border-radius: 8px;
+}
+
+#custom-cava-internal{
+    font-family: "Hack Nerd Font" ;
+    color: #B48EAD;
+    border-radius: 8px;
+}
+#window {
+    color: #B48EAD;	
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

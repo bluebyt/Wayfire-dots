@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Specify the filename to read
+filename="/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
+
+# Check if the file exists
+if [[ -f "$filename" ]]; then
+    # Read the file line by line
+    while IFS= read -r line || [[ -n "$line" ]]; do
+        # Extract the first two digits using substring extraction
+        first_two_digits="${line:0:2}"
+        
+        echo "$first_two_digits"
+    done < "$filename"
+else
+    echo "File $filename does not exist!"
+fi
+

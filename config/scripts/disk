@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Run the 'df' command and capture the output
+df_output=$(df -h /)
+
+# Extract the line containing the disk usage information
+disk_usage_line=$(echo "$df_output" | grep -E "/$")
+
+# Extract the used and available disk space values
+used=$(echo "$disk_usage_line" | awk '{print $3}')
+available=$(echo "$disk_usage_line" | awk '{print $4}')
+
+# Remove any non-digit characters from the used and available values
+used=$(echo "$used" | tr -cd '[:digit:]')
+available=$(echo "$available" | tr -cd '[:digit:]')
+
+# Calculate the percentage of disk usage
+total=$(($used + $available))
+percentage=$(($used * 100 / $total))
+
+# Print the percentage of disk usage
+echo "${percentage}"
+

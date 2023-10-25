@@ -1,0 +1,297 @@
+;; CAL VARS
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+(defpoll calendar_date :interval "12h" "date '+%A, %d %B'")
+(defpoll today :interval "12h" "date '+%a, %d %B'")
+(defpoll time :interval "5s" "date '+%H:%M'")
+
+;; ENV VARS
+;;(defpoll wm :interval "12h" "echo $XDG_CURRENT_DESKTOP")
+(defpoll wm :initial "..." :interval "12h" "$HOME/.config/scripts/display.sh &") 
+(defpoll shell :interval "1h" "echo $SHELL | awk -F'/' '{print $NF}'")
+(defpoll term :interval "1h" "echo $TERM | awk -F'-' '{print $NF}'")
+(defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/;s/ [0-9]\+m//'")
+(defpoll packages :interval "15m" "pacman -Q | wc -l")
+(defpoll updates_poll :initial "..." :interval "10m" "$HOME/.config/scripts/updates.sh &") 
+;; WEATHER VARS
+(defpoll weather_temp :interval "1h" :initial "0"
+	"$HOME/.config/scripts/Weather.sh current_temp")
+(defpoll weather_desc :interval "1h"
+	"$HOME/.config/scripts/Weather.sh weather_desc")
+(defpoll weather_feels_like :interval "3h"
+	"$HOME/.config/scripts/Weather.sh feels_like")
+(defpoll weather_humidity :interval "3h"
+	"$HOME/.config/scripts/Weather.sh humidity")
+(defpoll weather_icon :interval "3h"
+	"$HOME/.config/scripts/Weather.sh icon")
+(defpoll weather_wind :interval "3h"
+	"$HOME/.config/scripts/Weather.sh wind")
+
+(defpoll memory :interval "15s"
+    "$HOME/.config/scripts/memory")
+(defpoll cpu :interval "17s"
+    "$HOME/.config/scripts/cpu")
+(defpoll disk :interval "30s"
+    "$HOME/.config/scripts/disk")
+(defpoll tempe :interval "3s"
+    "$HOME/.config/scripts/tempe")
+(defpoll temp :initial 30 :interval "10s" `sensors | rg temp1 | rg -o "\\d+.\\d+" | head -1`)
+
+(defpoll IP_ADDR :interval "24h" "ip -br address | grep UP | awk '{ print $3 }'")
+
+
+(deflisten window :initial "..." "$HOME/.config/scripts/window-title.sh")
+
+;; Widgets
+
+(defwidget dash []
+    (box :class "dash" :orientation "h")
+)
+
+(defwidget cal[]
+    (box :class "cal-container" :orientation "v" :space-evenly "false" :halign "center"
+        (box  :class "cal-box" :orientation "v" :space-evenly "false"
+            (label :class "clock" :text time)
+            (label :class "date" :text today)
+        )   
+        (box :class "cal-window" :orientation "h"
+            (calendar :class "day-names" :day calendar_day :orientation "v"
+                      :class "month-year" :year calendar_year)
+        )
+    )
+)
+
+(defwidget info []
+    (box :class "info-box-outer" :orientation "h" :space-evenly false :halign "center"
+        (box :class "info-box-top" :orientation "v" :space-evenly false
+            (box :class "info-box-inner" :orientation "h" :space-evenly false
+                (box :class "info-box-left" :orientation "v" :space-evenly false
+                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
+                )
+                (box :class "info-box-right" :orientation "v" :space-evenly false
+                    (label :class "info-text" :halign "start" :text "${wm}")
+                    (label :class "info-text" :halign "start" :text "${shell}")
+                    (label :class "info-text" :halign "start" :text "${uptime}")
+                    (label :class "info-text" :halign "start" :text "${updates_poll} packages")
+                )
+            )
+        )
+    )
+)
+
+(defwidget window-title []
+    (box
+        (label :class "window-title"
+        :halign "center" 
+        :limit-width 16
+        :justify "center"
+        :text "${window}")
+    )
+)
+
+(defwidget weather []
+    (box :class "weather-container" :orientation "v" :space-evenly "false" :halign "center"
+        (box :class "weather-box" :orientation "h" :space-evenly "false" :halign "center" :spacing 10
+            (label :class "weather-icon" :text {weather_icon != "" ? "${weather_icon}" : ""})
+            (label :class "weather-temp" :text "${weather_temp}°C")
+        )
+        (box :class "weather-window" :orientation "v" :space-evenly "false" :spacing 2
+            (label :class "weather-feel" :text "${weather_desc}"
+                                        :limit-width 32
+                                        :justify "center"
+                                        :wrap "true")
+            (label :class "weather-desc" :text "Feels Like: ${weather_feels_like}°C")
+            (label :class "weather-desc" :halign "center" :text " ${weather_wind} km/h")
+            (label :class "weather-desc" :halign "center" :text "  ${weather_humidity} %")
+        )
+    )
+)
+
+
+(defwidget network [] 
+	(box :class "network-label" :orientation "h" :space-evenly "false" :spacing 10 :halign "center"
+        (label :text "${IP_ADDR}")
+    )
+)
+
+(defwidget network-up [] 
+	(box :class "network" :orientation "h" :space-evenly "false" :spacing 10 :halign "center"
+        (box :orientation "h" :class "network-box" 
+            (label :text "" :class "network-up")
+        )
+        (box :orientation "h" :width 130 
+            (graph  :class "network-graph-up"
+                    :thickness 2
+                    :value {round(EWW_NET.enp4s0.NET_UP / 1024 ,1)}
+                    :time-range "2m"
+                    :min 0
+                    :max 101
+                    :dynamic "true"
+                    :line-style "round"
+            )
+	    )
+    )
+)
+(defwidget network-down [] 
+	(box :class "network" :orientation "h" :space-evenly "false" :spacing 10 :halign "center"
+        (box :orientation "h" :class "network-box" 
+            (label :text "" :width 10 :class "network-down")
+        )
+        (box :orientation "h" :width 130
+            (graph  :class "network-graph-down"
+                    :thickness 2
+                    :value {round(EWW_NET.enp4s0.NET_DOWN / 1024 ,1)}
+                    :time-range "2m"
+                    :min 0
+                    :max 101
+                    :dynamic "true"
+                    :line-style "round"
+            )
+	    )
+    )
+)
+
+(defwidget system []
+    (box :class "sys_win" :orientation "h" :space-evenly "true" :hexpand "false" :vexpand "false" 
+        (box :class "sys_cpu_box" :orientation "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+            (circular-progress 
+                    :value cpu
+                    :class "sys_cpu"
+                    :thickness 8
+                (label :text ""
+                    :class "sys_icon_cpu"
+                    :limit-width 4
+                    :show_truncated false
+                    :wrap false))
+            (label :class "cpu_perc" :halign "center" :text "${cpu}%")
+        )
+        (box :class "sys_mem_box" :orientation "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+            (circular-progress 
+                    :value memory
+                    :class "sys_mem"
+                    :thickness 8
+              (label :text ""
+                    :class "sys_icon_mem"
+                    :limit-width 4
+                    :show_truncated false
+                    :wrap false
+                    :angle 0.0))
+            (label :class "mem_perc" :halign "center" :text "${memory}%")
+        )
+    )
+)
+
+(defwidget disktemp []
+    (box :class "disk_temp" :orientation "h" :space-evenly "true" :hexpand "false" :vexpand "false" 
+        (box :class "sys_disk_box" :orientation "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+          (circular-progress
+                  :value disk
+                  :class "sys_disk"
+                  :thickness 8
+              (label :text ""
+                    :class "sys_icon_disk"
+                    :limit-width 4
+                    :show_truncated false
+                    :wrap false))
+            (label :class "disk_perc" :halign "center" :text "${disk}%")
+        )        
+      (box :class "sys_tempe_box" :orientation "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+            (circular-progress 
+                    :value tempe
+                    :class "sys_tempe"
+                    :thickness 8
+              (label :text ""
+                    :class "sys_icon_tempe"
+                    :limit-width 4
+                    :show_truncated false
+                    :wrap false
+                    :angle 0.0))
+            (label :class "tempe_perc" :halign "center" :text "${tempe}C")
+        )  
+    )
+)
+
+
+
+(defwidget apps []
+    (box :class "app-container" :orientation "v" :space-evenly "true" :hexpand "false" :vexpand "false" :halign "center"
+    (label :text "Apps" :class "app-label")
+        (box :class "app-box" :orientation "h" :space-evenly "false" :hexpand "false" :vexpand "false" :spacing 10
+            (button :class "app-firefox" 
+			    :onclick "alacritty -e zsh 2> /dev/null" "")
+	        (button :class "app-files" 
+			    :onclick "thunar 2> /dev/null" "")
+            (button :class "app-code" 
+			    :onclick "wofi -n --show drun -k 2> /dev/null" "")
+            (button :class "app-steam"
+                :onclick "foot 2> /dev/null" "")
+        )
+    )
+)
+
+;; Functions
+(defwidget functions []
+    (box :class "function-container" :orientation "v" :space-evenly "true" :hexpand "false" :vexpand "false" :halign "center"
+    (label :text "Functions" :class "function-label")
+        (box :class "function-box" :orientation "h" :space-evenly "false" :hexpand "false" :vexpand "false" :spacing 10
+            (button :class "screenshot"
+                :onclick "bash $HOME/.config/scripts/screenshot.sh 2> /dev/null"
+                :tooltip "Screenshot"
+            (label :text "" :class "tooltip"))
+            (button :class "wallpaper"
+                :onclick "bash $HOME/.config/scripts/wallpaper.sh 2> /dev/null"
+                :tooltip "Wallpaper"
+            (label :text "" :class "tooltip"))
+            (button :class "keybind"
+                :onclick "$HOME/.config/scripts/hyprland"
+                :tooltip "Hyprland.conf"
+            (label :text "" :class "tooltip"))
+            (button :class "logout"
+                :onclick "bash $HOME/.config/scripts/logout.sh"
+                :tooltip "Logout"
+            (label :text "" :class "tooltip")
+            )
+        )
+    )
+)
+
+(defwidget right []
+    (box :class "right" :orientation "v" :space-evenly "false"
+        (cal)
+        (dash)
+        (window-title)
+        (dash)
+        (info)
+        (dash)
+        (apps)
+        (dash)
+        (weather)
+        (dash)
+        (network)
+        (network-up)
+        (network-down)
+        (dash)
+        (disktemp)
+        (system)
+	(dash)
+	(functions)
+    )
+)
+
+(defwindow sidebar
+    :monitor 0
+    :geometry (geometry :x "16px"
+                        :y "10px"
+                        :width "140px"
+                        :height "60%"
+                        :anchor "top left")
+    :stacking "fg"
+    :windowtype "dock"
+    :exclusive true
+        (box :class "main-container"
+        (right)
+    )
+)

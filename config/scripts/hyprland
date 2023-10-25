@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gedit ~/.config/hypr/hyprland.conf

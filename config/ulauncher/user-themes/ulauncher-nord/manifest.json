@@ -1,0 +1,12 @@
+{
+  "manifest_version": "1",
+  "name": "nord",
+  "display_name": "Nord",
+  "extend_theme": "dark",
+  "css_file": "theme.css",
+  "css_file_gtk_3.20+": "theme-gtk-3.20.css",
+  "matched_text_hl_colors": {
+    "when_selected": "#1e2529",
+    "when_not_selected": "#bde6fb"
+  }
+}

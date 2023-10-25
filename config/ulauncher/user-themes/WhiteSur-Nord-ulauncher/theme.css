@@ -1,0 +1,109 @@
+/* App Window */
+@define-color bg_color #2e3440;
+@define-color window_bg @bg_color;
+@define-color window_border_color #21252b;
+@define-color prefs_backgroud #21252b;
+
+/* Input */
+@define-color selected_bg_color #5271ad;
+@define-color selected_fg_color #d5e5ff;
+@define-color input_color #f5f5f5;
+@define-color caret_color darker(@input_color);
+
+/* Result items */
+@define-color item_name #d8dee9;
+@define-color item_text #4c566a;
+@define-color item_box_selected #5271ad;
+@define-color item_text_selected #d8dee9;
+@define-color item_name_selected #d8dee9;
+@define-color item_shortcut_color rgba(255,255,255, 0.25);
+@define-color item_shortcut_shadow rgba(0,0,0, 0.00);
+@define-color item_shortcut_color_sel #d5e5ff;
+@define-color item_shortcut_shadow_sel darker(@item_box_selected);
+
+.app {
+    background-color: @window_bg;
+    border: 1px solid @window_border_color;
+    border-radius: 14px;
+    box-shadow: 0 8px 6px -4px rgba(34, 39, 48, 0.6);
+    margin: 0 -12px;
+}
+
+.input {
+    color: @input_color;
+    padding: 0;
+}
+
+.item-box {
+    border-radius: 12px;
+}
+
+/* Selected text in input */
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+    background-color: alpha (@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+.item-text {
+    color: @item_text;
+}
+
+.item-name {
+    color: @item_name;
+}
+
+.selected.item-box {
+    background-color: @item_box_selected;
+}
+.selected.item-box .item-text {
+    color: @item_text_selected;
+}
+.selected.item-box .item-name {
+    color: @item_name_selected;
+}
+.item-shortcut {
+    color: @item_shortcut_color;
+    text-shadow: 1px 1px 1px @item_shortcut_shadow;
+}
+.selected.item-box .item-shortcut {
+    color: @item_shortcut_color_sel;
+    text-shadow: 1px 1px 1px @item_shortcut_shadow_sel;
+}
+
+.prefs-btn {
+    opacity: 0.6;
+}
+.prefs-btn * {
+    box-shadow: none;
+}
+.prefs-btn:hover {
+    background-color: @prefs_backgroud;
+}
+.no-window-shadow {
+    margin: -20px;
+}
+
+.result-box {
+    margin: 0px 6px -4px 6px;
+}
+
+.item-frame {
+    border-top: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 6%,
+        rgba(255, 255, 255, 0) 6%,
+        rgba(65, 65, 65, 1) 6%,
+        rgba(65, 65, 65, 1) 51%,
+        rgba(65, 65, 65, 1) 94%,
+        rgba(255, 255, 255, 0) 94%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+.item-frame:first-child {
+    border-width: 0px;
+}
