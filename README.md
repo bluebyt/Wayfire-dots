@@ -18,6 +18,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [Text editor](https://apps.gnome.org/TextEditor/) The new text editor for Gnome. Command to install the custom Nord theme : $sudo cp nord.xml /usr/share/gnome-text-editor/styles/
 - [Ulauncher](https://ulauncher.io/) Application launcher for Linux
 - [Grimshot-pv](https://github.com/ferdiebergado/grimshot-pv) Script with added screenshot preview on the notification
+- [Xava](https://github.com/nikp123/xava#programming-opengl-shaders) Audio Visualizer
 
 ## Install steps
 
