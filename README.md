@@ -20,6 +20,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [Grimshot-pv](https://github.com/ferdiebergado/grimshot-pv) Script with added screenshot preview on the notification
 - [Xava](https://github.com/nikp123/xava#programming-opengl-shaders) Audio Visualizer
 - [G4music](https://github.com/neithern/g4music) Music player
+- [Caskaydiacove nerd font ] 
 
 ## Install steps
 
