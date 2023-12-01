@@ -26,6 +26,7 @@ window#waybar {
 #workspaces,
 #temperature,
 #custom-wlogout,
+#custom-wallchange,
 
 #cava{
     background-color: #2e3440;
@@ -212,3 +213,8 @@ window#waybar {
   border-radius: 10px;
 }
 
+#custom-wallchange {
+  background-color: #2e3440;
+  color: #B48EAD;
+  border-radius: 10px;
+}
