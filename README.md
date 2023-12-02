@@ -9,6 +9,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
 - [Waybar](https://github.com/Alexays/Waybar) Customizable Wayland bar
+- [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
 - [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme) command: ./install.sh -c dark -l --tweaks nord
 - [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
