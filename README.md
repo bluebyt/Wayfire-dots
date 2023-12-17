@@ -25,8 +25,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - Caskaydiacove nerd font 
 
 ## Workflow
-- [Video on Youtubes](https://github.com/neithern/g4music)
-https://youtu.be/NwBcCH1cJRI
+- [Video on Youtubes](https://youtu.be/NwBcCH1cJRI)
 
 ## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=3ndsDxlkTrw)
