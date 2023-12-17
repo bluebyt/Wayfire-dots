@@ -24,8 +24,11 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [G4music](https://github.com/neithern/g4music) Music player
 - Caskaydiacove nerd font 
 
-## Install steps
+## Workflow
+- [Video on Youtubes](https://github.com/neithern/g4music)
+https://youtu.be/NwBcCH1cJRI
 
+## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=3ndsDxlkTrw)
 - [Install Wayfire](https://github.com/WayfireWM/wf-install)
 
