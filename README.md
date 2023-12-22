@@ -31,10 +31,10 @@ Warning: This installation guide is for my future self. Some steps might not be 
 ## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=3ndsDxlkTrw)
   
-Dependencies for Archlinux
+# Dependencies for Archlinux
 `sudo pacman -S freetype2 glm libdrm libevdev libgl libinput libjpeg libpng libxkbcommon libxml2 pixman wayland-protocols wlroots meson cmake doctest doxygen nlohmann-json libnotify base-devel pkg-config autoconf gobject-introspection gtk-layer-shell`
 
-Install scripts
+# Install scripts
 `./install.sh --prefix /opt/wayfire --stream master`
 
 ## Configuration
