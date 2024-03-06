@@ -5,7 +5,8 @@ Warning: This installation guide is for my future self. Some steps might not be 
 
 ![Screenshot_02_12_2023](https://github.com/bluebyt/Wayfire-dots/assets/18442224/a32dc7a0-6657-446e-b7dd-81bdaea9cd82)
 
-![screenshotNordYoutubes2withouttext](https://github.com/bluebyt/Wayfire-dots/assets/18442224/3066505e-a6ed-49aa-a063-fefeba49bec2)
+- [Instructions on Youtubes](https://youtu.be/abtU54uMXH0)
+![screenshotNordYoutubes2](https://github.com/bluebyt/Wayfire-dots/assets/18442224/093c515a-4661-4dee-a0cf-4c471c2db0f2)
 
 
 ## Details
