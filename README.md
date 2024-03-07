@@ -7,7 +7,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 
 ![screenshotNordgithubnouveau2](https://github.com/bluebyt/Wayfire-dots/assets/18442224/9704b05f-0a7c-4abe-9ac4-0be1d0f57134)
 
-[Instructions on Youtubes](https://youtu.be/abtU54uMXH0)
+[Install Wayfire on Youtubes](https://youtu.be/abtU54uMXH0)
 
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
