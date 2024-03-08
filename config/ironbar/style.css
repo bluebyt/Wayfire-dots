@@ -1,0 +1,289 @@
+@define-color color_bg #2e3440;
+@define-color color_bg_dark #292e39;
+@define-color color_border #424242;
+@define-color color_border_active #b48ead;
+@define-color color_text #5e81ac;
+@define-color color_urgent #bf616a;
+
+.container {
+  font-family: Roboto Mono SemiBold;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#cava {
+  font-family: renogare;
+}
+
+.clock {
+  font-size: 10px;
+  font-weight: normal;
+  padding: 0px 10px 0px 10px;
+  background: linear-gradient(45deg, rgb(235,203,139) 0%, rgb(208,135,112) 50%, rgb(180, 142, 173) 100%);
+  background-size: 300% 300%;
+  animation: gradient 2s ease infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+  border-radius: 16px;
+  margin: 10px 10px 10px 10px;
+  font-family: Roboto Mono SemiBold;
+}
+
+.clock_date {
+  font-family: Roboto Mono SemiBold;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgb(94,129,172);
+}
+
+
+.background {
+  background-color: rgba(0, 0, 0, 0)
+}
+
+/* base */
+.sysinfo .item,
+.script,
+.tray {
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: #88c0d0;
+  color: #4c566a;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+}
+
+.wlogout {
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: #a3be8c;
+  color: #4c566a;
+  font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+}
+
+.pacman {
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: #a3be8c;
+  color: #4c566a;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+}
+
+.scale,
+.internet,
+.script {
+  transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  border-radius: 15px;
+  background: rgb(180,142,173);
+  background: linear-gradient(45deg, rgba(180,142,173,1) 0%, rgba(180,142,173,1) 43%, rgba(129,161,193,1) 80%, rgba(94,129,172,1)100%);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+  color: #fff;
+}
+
+
+scale trough {
+  border-radius: 16px;
+  background-color: #E7D4CB;
+  box-shadow: 0 2px 3px 2px rgba(00, 00, 00, 0.4);
+  min-height: 10px;
+  min-width: 70px;
+  margin: 0px 5px 10px 10px;
+}
+
+scale value {
+  color: #77a5bf;
+  font-size: 0px;
+}
+
+scale trough highlight {
+  background-image: linear-gradient(to right, #afcee0 30%, #92B6F4 50%, #77a5bf 100%);
+  border-radius: 10px;
+  background-color: #afcee0;
+}
+
+.focused {
+  color: rgb(76,86,106);
+  font-size: 20px;
+  padding: 0px 10px 0px 10px;
+  margin: 10px 10px 10px 0px;
+  background: rgb(94,129,172);
+  background: linear-gradient(45deg, rgb(129,161,193) 0%, rgb(180,142,173) 43%, rgb(163,190,140) 100%);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+  border-radius: 16px;
+}
+
+
+/* cpu */
+.sysinfo .item:nth-child(odd) {
+  background: rgb(143,188,187);
+  background: linear-gradient(52deg, rgba(180,142,173,1) 0%, rgba(136,192,208,1) 32%, 	rgba(129,161,193,1) 72%, rgba(163,190,140,1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  /* background-color: #b4befe; */
+  color: #4c566a;
+}
+
+.music,
+.clock {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  background: rgb(202, 158, 230);
+  background: linear-gradient(45deg, rgba(202, 158, 230, 1) 0%, rgba(245, 194, 231, 1) 43%, rgba(180, 190, 254, 1) 80%, rgba(137, 180, 250, 1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 10s ease infinite;
+  color: #fff;
+}
+
+/* -- music -- */
+
+.music .contents
+
+
+.popup-music
+
+.tray {
+  color: rgb(84, 111, 175);
+  font-size: 15px;
+  padding: 0px 10px 0px 10px;
+  margin: 10px 10px 10px 0px;
+  background: rgb(238, 190, 190);
+  background: linear-gradient(45deg, rgb(244, 219, 214) 0%, rgb(223, 221, 238) 43%, rgb(245, 208, 225) 100%);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+  border-radius: 16px;
+}
+
+.tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+.tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+.workspaces {
+  font-family: Renogare;
+  font-weight: normal;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0px 0px 20px;
+  border-radius: 16px;
+}
+
+.workspaces .item {
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  border: unset;
+  background: #fff;
+  border-radius: 15px;
+  margin: 10px 10px 15px 0px;
+  padding: 5px 20px 5px 20px;
+  color: #cba6f7;
+}
+
+.workspaces .item.focused {
+  border: unset;
+  font-size: 25px;
+  transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  padding: 5px 10px 5px 10px;
+  border-radius: 16px;
+  margin: 10px 10px 15px 0px;
+  background: rgb(202, 158, 230);
+  background: linear-gradient(45deg, rgba(202, 158, 230, 1) 0%, rgba(245, 194, 231, 1) 43%, rgba(180, 190, 254, 1) 80%, rgba(137, 180, 250, 1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 10s ease infinite;
+  color: #fff;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+tooltip.background {
+  background-color: rgba(00, 00, 00, 0.5);
+  font-size: 18px;
+  border-radius: 10px;
+  color: #FDFDFD;
+}
+
+tooltip * {
+  padding: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+.host tooltip {
+  background-color: rgba(255, 00, 00, 0.5);
+}
+
+.popup-clock {
+  font-weight: bolder;
+  background: rgb(46,52,64);
+  border-radius: 10px;
+}
+
+.popup-clock .calendar-clock {
+    color: #5e81ac;
+    font-size: 2.5em;
+    padding-bottom: 0.1em;
+}
+
+.popup-clock .calendar {
+    background-color: #2e3440;
+    color: @color_text;
+    border-radius: 10px
+}
+
+.popup-clock .calendar .header {
+    padding-top: 1em;
+    border-top: 1px solid @color_border;
+    font-size: 1.5em;
+}
+
+.popup-clock .calendar:selected {
+    background-color: @color_border_active;
+}
