@@ -11,6 +11,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
+- [Ironbar](https://github.com/JakeStanger/ironbar) A customisable and feature-rich GTK bar for wlroots compositors, written in Rust.
 - [Waybar](https://github.com/Alexays/Waybar) Customizable Wayland bar
 - [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
