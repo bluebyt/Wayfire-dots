@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# Author: github.com/NeshHari
+
+import random
+import sys
+
+quotes = [
+    "Be the change you wish to see in the world. ~ Mahatma Gandhi",
+    "I have a dream. ~ Martin Luther King Jr.",
+    "Not all those who wander are lost. ~ J.R.R. Tolkien",
+    "All that we see or seem is but a dream within a dream. ~ Edgar Allan Poe",
+    "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. ~ Ralph Waldo Emerson",
+    "The only way to do great work is to love what you do. ~ Steve Jobs",
+    "We are what we repeatedly do. Excellence, then, is not an act, but a habit. ~ Aristotle",
+    "In three words I can sum up everything I've learned about life: it goes on. ~ Robert Frost",
+    "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. ~ Helen Keller",
+    "It does not matter how slowly you go as long as you do not stop. ~ Confucius",
+    "Believe you can and you're halfway there. ~ Theodore Roosevelt",
+    "The unexamined life is not worth living. ~ Socrates",
+    "In the end, we will remember not the words of our enemies, but the silence of our friends. ~ Martin Luther King Jr.",
+    "Success is not final, failure is not fatal: it is the courage to continue that counts. ~ Winston Churchill",
+    "You miss 100% of the shots you don't take. ~ Wayne Gretzky",
+    "If you want to go fast, go alone. If you want to go far, go together. ~ African proverb",
+    "You can't build a reputation on what you are going to do. ~ Henry Ford",
+    "The only thing we have to fear is fear itself. ~ Franklin D. Roosevelt",
+    "The journey of a thousand miles begins with one step. ~ Lao Tzu",
+    "A house divided against itself cannot stand. ~ Abraham Lincoln",
+    "Ask not what your country can do for you, ask what you can do for your country. ~ John F. Kennedy",
+    "I am not a product of my circumstances. I am a product of my decisions. ~ Stephen Covey",
+    "Our greatest glory is not in never falling, but in rising every time we fall. ~ Confucius",
+    "Education is the most powerful weapon which you can use to change the world. ~ Nelson Mandela",
+    "It always seems impossible until it's done. ~ Nelson Mandela",
+    "The only true wisdom is in knowing you know nothing. ~ Socrates",
+    "The best way to predict your future is to create it. ~ Abraham Lincoln",
+    "The future belongs to those who believe in the beauty of their dreams. ~ Eleanor Roosevelt",
+    "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. ~ Christian D. Larson",
+    "The true test of leadership is how well you function in a crisis. ~ Brian Tracy",
+    "Change your thoughts and you change your world. ~ Norman Vincent Peale",
+    "The way to get started is to quit talking and begin doing. ~ Walt Disney",
+    "Don't wait for opportunities, create them. ~ Unknown",
+    "You must be the change you wish to see in the world. ~ Mahatma Gandhi",
+    "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light. ~ Albus Dumbledore",
+    "Life is a journey, and if you fall in love with the journey, you will be in love forever. ~ Peter Hagerty",
+    "The only thing we have to fear is fear itself. ~ Franklin D. Roosevelt",
+    "All our dreams can come true, if we have the courage to pursue them. ~ Walt Disney",
+    "The only limit to our realization of tomorrow will be our doubts of today. ~ Franklin D. Roosevelt",
+    "You are not a drop in the ocean. You are the entire ocean in a drop. ~ Rumi",
+    "The best way to find yourself is to lose yourself in the service of others.~ Mahatma Gandhi",
+    "Life is 10% what happens to us and 90% how we react to it. ~ Charles R. Swindoll",
+    "The greatest glory in living lies not in never falling, but in rising every time we fall. ~ Nelson Mandela",
+    "The purpose of our lives is to be happy. ~ Dalai Lama",
+    "The most wasted of all days is one without laughter. ~ E.E. Cummings",
+    "I can't change the direction of the wind, but I can adjust my sails to always reach my destination. ~ Jimmy Dean",
+    "You have within you right now, everything you need to deal with whatever the world can throw at you. ~ Brian Tracy",
+    "The greatest wealth is to live content with little. ~ Plato",
+    "It's not about how hard you hit. It's about how hard you can get hit and keep moving forward. ~ Rocky Balboa",
+    "The biggest adventure you can ever take is to live the life of your dreams. ~ Oprah Winfrey",
+    "The best way to predict the future is to create it. ~ Peter Drucker",
+    "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. ~ Roy T. Bennett",
+]
+
+
+last_quote = ""
+quote = random.choice(quotes)
+while quote == last_quote:
+    quote = random.choice(quotes)
+quote_parts = quote.split("~")
+last_quote = quote_parts[0] + "~" + quote_parts[1]
+
+if len(sys.argv) >= 2:
+    if sys.argv[1] == "--quote-and-quotee":
+        print(quote_parts[0] + "\n\n~" + quote_parts[1])

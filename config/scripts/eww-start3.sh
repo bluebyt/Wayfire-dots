@@ -1,3 +1,3 @@
 #!/bin/bash
-/home/bluebyt/.local/bin/eww/eww daemon
-/home/bluebyt/.local/bin/eww/eww open sidebar
+$HOME/.local/bin/eww/eww daemon
+$HOME/.local/bin/eww/eww open sidebar
