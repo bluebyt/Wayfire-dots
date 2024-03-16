@@ -56,4 +56,5 @@ cd wf-install
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
 - Follow focus IPC
-![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/6f484edb-07d9-4594-b9c8-590e3513f815)
+
+![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/ba7ea7af-b09b-4d59-be1e-7ff211083578)
