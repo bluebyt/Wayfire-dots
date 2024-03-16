@@ -1,0 +1,6 @@
+{
+    nlohmann::json j;
+    j["width"]  = d.width;
+    j["height"] = d.height;
+    return j;
+}

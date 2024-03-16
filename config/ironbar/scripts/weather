@@ -1,0 +1,7 @@
+#!/bin/bash
+#curl wttr.in/Montreal?format="+%c+%t\n"
+#curl v2n.wttr.in/Montreal?format="%c%t\n"
+
+#!/bin/bash
+curl -s wttr.in/Montreal?format="%c%t\n" | sed 's/ //'
+
