@@ -1,4 +1,0 @@
-used="$(free -m | grep Mem: | awk '{ print $3 }')"
-shared="$(free -m | grep Mem: | awk '{ print $5 }')"
-true_used=$(expr $shared + $used)
-echo "$true_used*0.001" | bc -l

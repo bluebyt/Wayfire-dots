@@ -1,3 +1,0 @@
-#!/bin/bash
-
-wlogout -p xdg -b 2 -T 300 -B 300 -R 800 -L 800

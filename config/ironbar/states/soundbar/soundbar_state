@@ -1,9 +1,0 @@
-#!/bin/bash
-
-LOCK="/tmp/ironbar_soundbar.lock"
-if [ -f "$LOCK" ]; then
-	exit 0
-else
-	exit 1
-fi
-
