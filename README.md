@@ -55,6 +55,6 @@ cd wf-install
 ## Running
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
-- Follow focus IPC
-
+## Follow focus moduel
+- Add plugins = ipc ipc-rules follow-focus (ipc must be first)
 ![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/ba7ea7af-b09b-4d59-be1e-7ff211083578)
