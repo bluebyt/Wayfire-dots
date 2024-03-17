@@ -55,6 +55,9 @@ cd wf-install
 ## Running
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
-## Follow focus module
+## Follow focus and inactive-alpha
+-Set envoronment variable ~/.config/environment.d/environment.conf
+WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 - Add plugins = ipc ipc-rules follow-focus (ipc must be first)
-![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/ba7ea7af-b09b-4d59-be1e-7ff211083578)
+- Add to [autostart] launcher = ~/.config/ipc-scripts/inactive-alpha.py
+![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/7d4a0a2a-c415-488a-8063-2e72946b823a)
