@@ -60,6 +60,7 @@ cd wf-install
 ```
 WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 ```
-- Add plugins = ipc ipc-rules follow-focus (ipc must be first)
-- Add to [autostart] launcher = ~/.config/ipc-scripts/inactive-alpha.py
+- Edit and add to $HOME/.config/wayfire.ini the following two line 
+- plugins = ipc ipc-rules follow-focus (ipc must be first)
+- [autostart] launcher = ~/.config/ipc-scripts/inactive-alpha.py
 ![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/7d4a0a2a-c415-488a-8063-2e72946b823a)
