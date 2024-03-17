@@ -56,7 +56,7 @@ cd wf-install
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
 ## Follow focus and inactive-alpha
--Set envoronment variable ~/.config/environment.d/environment.conf
+-Set environment variable ~/.config/environment.d/environment.conf
 ```
 WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 ```
