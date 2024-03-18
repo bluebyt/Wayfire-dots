@@ -60,6 +60,8 @@ cd wf-install
 ```
 WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 ```
+- Copy the script from here [inactive-alpha.py](https://github.com/WayfireWM/wayfire/tree/master/ipc-scripts) and wayfire_socket.py to the same directory somewhere.
+- Example ~/.config/ipc-scripts/*.py
 - Edit and add to $HOME/.config/wayfire.ini the following two line 
 - plugins = ipc ipc-rules follow-focus (ipc must be first)
 - [autostart] launcher = ~/.config/ipc-scripts/inactive-alpha.py
