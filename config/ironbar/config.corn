@@ -8,7 +8,7 @@ let {
   
     $focused = {
       type = "focused"
-      show_icon = true
+      show_icon = false
       show_title = true
       icon_size = 24
       icon_theme = "Tela-circle-nord" 
@@ -29,7 +29,6 @@ let {
       " {disk_free:/}GB "
       " {memory_percent}% "
       " {cpu_percent}% "
- //   "󰓢 {net_down:enp4s0} / {net_up:enp4s0} Mbps"
     ]
     }
 
@@ -105,6 +104,84 @@ let {
         ]
     }
     
+        $work1 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work1"
+                class = "work1"
+                label = "1"
+                on_click = "!~/.config/ipc-scripts/work1.py"
+            }
+        ]
+    }
+    
+            $work2 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work2"
+                class = "work2"
+                label = "2"
+                on_click = "!~/.config/ipc-scripts/work2.py"
+            }
+        ]
+    }
+  
+              $work3 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work3"
+                class = "work3"
+                label = "3"
+                on_click = "!~/.config/ipc-scripts/work3.py"
+            }
+        ]
+    }
+ 
+               $work4 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work4"
+                class = "work4"
+                label = "4"
+                on_click = "!~/.config/ipc-scripts/work4.py"
+            }
+        ]
+    }
+    
+                   $work5 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work5"
+                class = "work5"
+                label = "5"
+                on_click = "!~/.config/ipc-scripts/work5.py"
+            }
+        ]
+    }
+    
+                       $work6 = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "work6"
+                class = "work6"
+                label = "6"
+                on_click = "!~/.config/ipc-scripts/work6.py"
+            }
+        ]
+    }
+    
     $pacman = {
         type = "custom"
         bar = [ 
@@ -125,9 +202,9 @@ let {
         cmd = "~/.config/ironbar/scripts/weather"
    }
    
-    $start = [ $mpd_local $weather $focused ]
+    $start = [ $mpd_local $weather $work1 $work2 $work3 $focused ]
     $center = [ $clock ]
-    $end = [ $volume $pacman $SysInfo  $wlogout ]
+    $end = [ $volume $pacman $SysInfo $wlogout ]
 }
 in {
         icon_theme = "Tela-circle-nord"

@@ -15,28 +15,12 @@
   font-family: renogare;
 }
 
-.clock {
-  color: rgb(76,86,106);
-  font-size: 10px;
-  font-weight: normal;
-  padding: 0px 10px 0px 10px;
-  background: linear-gradient(45deg, rgb(235,203,139) 0%, rgb(208,135,112) 50%, rgb(180, 142, 173) 100%);
-  background-size: 300% 300%;
-  animation: gradient 2s ease infinite;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-  border-radius: 16px;
-  margin: 10px 10px 10px 10px;
-  font-family: Roboto Mono SemiBold;
-}
-
 .clock_date {
   font-family: Roboto Mono SemiBold;
   font-weight: normal;
   font-size: 18px;
   color: rgb(94,129,172);
 }
-
 
 .background {
   background-color: rgba(0, 0, 0, 0)
@@ -56,6 +40,7 @@
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
 }
 
+
 .wlogout {
   padding: 0px 10px;
   margin-top: 10px;
@@ -68,6 +53,9 @@
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
 }
 
+.work1,
+.work2,
+.work3,
 .pacman {
   padding: 0px 10px;
   margin-top: 10px;
@@ -121,8 +109,8 @@ scale trough highlight {
   background-color: #afcee0;
 }
 
-.focused {
-  color: rgb(76,86,106);
+.focused { /*
+ color: rgb(76,86,106);
   font-size: 20px;
   padding: 0px 10px 0px 10px;
   margin: 10px 10px 10px 0px;
@@ -130,12 +118,30 @@ scale trough highlight {
   background: linear-gradient(45deg, rgb(129,161,193) 0%, rgb(180,142,173) 43%, rgb(163,190,140) 100%);
   background-size: 300% 300%;
   animation: gradient 5s ease infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   border-radius: 16px;
+    */    
+    padding: 0px 10px 0px 10px;
+    margin: 10px 10px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    background: rgb(94,129,172);
+    color: rgb(76,86,106);
+    background: radial-gradient(circle, rgba(195,164,189,1) 0%, rgba(187,153,181,1) 12%, rgba(94,129,172,1) 19%, rgba(180,142,173,1) 20%, rgba(94,129,172,1) 82%, rgba(136,192,208,1) 83%, rgba(141,170,199,1) 90%, rgba(129,161,193,1) 100%); 
+    background-size: 400% 400%;
+    animation: gradient 7s linear infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+    border-radius: 16px;
+  
 }
 
 
 /* cpu */
 .sysinfo .item:nth-child(odd) {
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
   background: rgb(143,188,187);
   background: linear-gradient(52deg, rgba(180,142,173,1) 0%, rgba(136,192,208,1) 32%, 	rgba(129,161,193,1) 72%, rgba(163,190,140,1) 100%);
   background-size: 300% 300%;
@@ -145,8 +151,10 @@ scale trough highlight {
   color: #4c566a;
 }
 
-.music,
-.clock {
+
+
+
+.clock {  /*
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -162,15 +170,42 @@ scale trough highlight {
   background: linear-gradient(45deg, rgba(202, 158, 230, 1) 0%, rgba(245, 194, 231, 1) 43%, rgba(180, 190, 254, 1) 80%, rgba(137, 180, 250, 1) 100%);
   background-size: 300% 300%;
   animation: gradient 10s ease infinite;
-  color: #fff;
+  color: rgb(76,86,106);
+  */ 
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  border-radius: 15px;
+  background: rgb(143,188,187);
+  background: linear-gradient(52deg, rgba(180,142,173,1) 0%, rgba(136,192,208,1) 32%, 	rgba(129,161,193,1) 72%, rgba(163,190,140,1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  color: #4c566a;
 }
 
-/* -- music -- */
-
+/*  
 .music .contents
-
-
-.popup-music
+.popup-music */
+.music {
+  padding: 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: rgb(143,188,187);
+  background: linear-gradient(52deg, rgba(180,142,173,1) 0%, rgba(136,192,208,1) 32%, 	rgba(129,161,193,1) 72%, rgba(163,190,140,1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  /* background-color: #b4befe; */
+  color: #4c566a;
+}
 
 .tray {
   color: rgb(84, 111, 175);
@@ -196,7 +231,7 @@ scale trough highlight {
 .workspaces {
   font-family: Renogare;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: normal;
   margin: 10px 0px 0px 20px;
   border-radius: 16px;
@@ -214,7 +249,7 @@ scale trough highlight {
 
 .workspaces .item.focused {
   border: unset;
-  font-size: 25px;
+  font-size: 20px;
   transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
   box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
@@ -243,6 +278,14 @@ scale trough highlight {
   }
 }
 
+@keyframes gradient_f_nh {
+	0% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
+}
 
 tooltip.background {
   background-color: rgba(00, 00, 00, 0.5);
