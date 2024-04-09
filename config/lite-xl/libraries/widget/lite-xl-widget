@@ -1,0 +1,2 @@
+mkdir ~/.config/lite-xl/libraries
+git clone https://github.com/lite-xl/lite-xl-widgets ~/.config/lite-xl/libraries/widget

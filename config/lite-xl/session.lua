@@ -1,0 +1,1 @@
+return {recents={}, window={[1]=1753,[2]=1153,[3]=297,[4]=95,["n"]=4}, window_mode="normal", previous_find={[1]="player",[2]="config",[3]="workspace: 5",[4]="workspace",[5]="volume",[6]="pulse",[7]="pavu",[8]="mpv",[9]="wezter",[10]="foot",[11]="wezterm",[12]="eog",[13]="app",[14]="workspace 4",[15]="xfce",[16]="quit",[17]="close"}, previous_replace={}}
