@@ -12,21 +12,19 @@ Warning: This installation guide is for my future self. Some steps might not be 
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
 - [Ironbar](https://github.com/JakeStanger/ironbar) A customisable and feature-rich GTK bar for wlroots compositors, written in Rust.
-- [Waybar](https://github.com/Alexays/Waybar) Customizable Wayland bar
 - [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
-- [Graphite-gtk-theme](https://github.com/vinceliuice/Graphite-gtk-theme) command: ./install.sh -c dark -l --tweaks nord
+- [Tokyonight-Dark](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) command: ./install.sh -d ~/.local/share/themes -c dark -l --tweaks black
 - [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
 - [Fish shell](https://github.com/fish-shell/fish-shell) Command line shell
 - [Startship prompt](https://starship.rs/) Customizable prompt
 - [nitch](https://github.com/ssleert/nitch) Fast system fetch
 - [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
-- [Text editor](https://apps.gnome.org/TextEditor/) The new text editor for Gnome. Command to install the custom Nord theme : $sudo cp nord.xml /usr/share/gnome-text-editor/styles/
+- [Lite XL](https://lite-xl.com/) A lightweight, simple, fast, feature-filled, and extremely extensible text editor
 - [Ulauncher](https://ulauncher.io/) Application launcher for Linux
 - [Grimshot-pv](https://github.com/ferdiebergado/grimshot-pv) Script with added screenshot preview on the notification
 - [Xava](https://github.com/nikp123/xava#programming-opengl-shaders) Audio Visualizer
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) Terminal Music player
-- [G4music](https://github.com/neithern/g4music) Music player
 - Caskaydiacove nerd font 
 
 ## Workflow
