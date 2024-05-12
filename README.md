@@ -19,7 +19,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme)
 - [Fish shell](https://github.com/fish-shell/fish-shell) Command line shell
 - [Startship prompt](https://starship.rs/) Customizable prompt
-- [nitch](https://github.com/ssleert/nitch) Fast system fetch
+- [Catnip](https://github.com/iinsertNameHere/catnip) A minimalistic and fast system fetch
 - [SwayOSD](https://github.com/ErikReider/SwayOSD) A OSD window for common actions like volume and capslock.
 - [Lite XL](https://lite-xl.com/) A lightweight, simple, fast, feature-filled, and extremely extensible text editor
 - [Ulauncher](https://ulauncher.io/) Application launcher for Linux
