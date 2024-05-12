@@ -45,7 +45,14 @@ git clone https://github.com/WayfireWM/wf-install
 cd wf-install
 ./install.sh --prefix /opt/wayfire --stream master
 ```
-
+## Install Pixdecor
+```
+git clone https://github.com/WayfireWM/wf-install
+cd pixdecor
+PKG_CONFIG_PATH=/opt/wayfire/lib/pkgconfig meson setup build --prefix=/opt/wayfire
+ninja -C build
+ninja -C build install
+```
 ## Configuration
 - Edit $HOME/.config/wayfire.ini
 - Edit $HOME/.config/wf-shell.ini
