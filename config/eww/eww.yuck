@@ -10,8 +10,8 @@
 (defpoll wm :initial "..." :interval "12h" "$HOME/.config/scripts/display.sh &") 
 (defpoll shell :interval "1h" "echo $SHELL | awk -F'/' '{print $NF}'")
 (defpoll term :interval "1h" "echo $TERM | awk -F'-' '{print $NF}'")
-(defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/;s/ [0-9]\+m//'")
-(defpoll packages :interval "15m" "pacman -Q | wc -l")
+(defpoll uptime :interval "1m" "$HOME/.config/scripts/uptime.sh &")
+;;(defpoll packages :interval "15m" "pacman -Q | wc -l")
 (defpoll updates_poll :initial "..." :interval "10m" "$HOME/.config/scripts/updates.sh &") 
 ;; WEATHER VARS
 (defpoll weather_temp :interval "1h" :initial "0"
@@ -66,10 +66,10 @@
         (box :class "info-box-top" :orientation "v" :space-evenly false
             (box :class "info-box-inner" :orientation "h" :space-evenly false
                 (box :class "info-box-left" :orientation "v" :space-evenly false
-                    (label :class "info-icon" :text " :")
-                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
                     (label :class "info-icon" :text " :")
-                    (label :class "info-icon" :text " :")
+                    (label :class "info-icon" :text " :")
                 )
                 (box :class "info-box-right" :orientation "v" :space-evenly false
                     (label :class "info-text" :halign "start" :text "${wm}")
@@ -125,7 +125,7 @@
         (box :orientation "h" :width 130 
             (graph  :class "network-graph-up"
                     :thickness 2
-                    :value {round(EWW_NET.enp4s0.NET_UP / 1024 ,1)}
+                    :value {round(EWW_NET.enp4s0.NET_UP / (1024 * 1024) ,1)}
                     :time-range "2m"
                     :min 0
                     :max 101
@@ -161,7 +161,7 @@
                     :value cpu
                     :class "sys_cpu"
                     :thickness 8
-                (label :text ""
+                (label :text ""
                     :class "sys_icon_cpu"
                     :limit-width 4
                     :show_truncated false
@@ -173,7 +173,7 @@
                     :value memory
                     :class "sys_mem"
                     :thickness 8
-              (label :text ""
+              (label :text ""
                     :class "sys_icon_mem"
                     :limit-width 4
                     :show_truncated false
@@ -191,7 +191,7 @@
                   :value disk
                   :class "sys_disk"
                   :thickness 8
-              (label :text ""
+              (label :text ""
                     :class "sys_icon_disk"
                     :limit-width 4
                     :show_truncated false
@@ -221,13 +221,13 @@
     (label :text "Apps" :class "app-label")
         (box :class "app-box" :orientation "h" :space-evenly "false" :hexpand "false" :vexpand "false" :spacing 10
             (button :class "app-firefox" 
-			    :onclick "alacritty -e zsh 2> /dev/null" "")
+			    :onclick "alacritty -e zsh 2> /dev/null" "")
 	        (button :class "app-files" 
 			    :onclick "thunar 2> /dev/null" "")
             (button :class "app-code" 
 			    :onclick "wofi -n --show drun -k 2> /dev/null" "")
             (button :class "app-steam"
-                :onclick "foot 2> /dev/null" "")
+                :onclick "foot 2> /dev/null" "")
         )
     )
 )
@@ -240,7 +240,7 @@
             (button :class "screenshot"
                 :onclick "bash $HOME/.config/scripts/screenshot.sh 2> /dev/null"
                 :tooltip "Screenshot"
-            (label :text "" :class "tooltip"))
+            (label :text "" :class "tooltip"))
             (button :class "wallpaper"
                 :onclick "bash $HOME/.config/scripts/wallpaper.sh 2> /dev/null"
                 :tooltip "Wallpaper"
@@ -284,7 +284,7 @@
 (defwindow sidebar
     :monitor 0
     :geometry (geometry :x "16px"
-                        :y "10px"
+                        :y "40px"
                         :width "140px"
                         :height "60%"
                         :anchor "top left")
