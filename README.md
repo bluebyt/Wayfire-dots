@@ -47,7 +47,7 @@ cd wf-install
 ```
 ## Install Pixdecor
 ```
-git clone https://github.com/WayfireWM/wf-install
+git clone https://github.com/soreau/pixdecor.git
 cd pixdecor
 PKG_CONFIG_PATH=/opt/wayfire/lib/pkgconfig meson setup build --prefix=/opt/wayfire
 ninja -C build
