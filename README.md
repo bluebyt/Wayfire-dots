@@ -26,7 +26,8 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [Grimshot-pv](https://github.com/ferdiebergado/grimshot-pv) Script with added screenshot preview on the notification
 - [Xava](https://github.com/nikp123/xava#programming-opengl-shaders) Audio Visualizer
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) Terminal Music player
-- Caskaydiacove nerd font 
+- [Swappy](https://github.com/jtheoof/swappy) A Wayland native snapshot and editor tool
+- Caskaydiacove nerd font
 
 ## Workflow
 - [Video on Youtubes](https://youtu.be/NwBcCH1cJRI)
