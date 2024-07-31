@@ -2,17 +2,14 @@
 #
 # This script demonstrates how Wayfire's IPC can be used to set the opacity of inactive views.
 
-import os
-from wayfire_socket import *
+from wayfire import WayfireSocket
 
-addr = os.getenv('WAYFIRE_SOCKET')
-sock = WayfireSocket(addr)
+sock = WayfireSocket()
 sock.watch(['view-focused'])
 
 last_focused_toplevel = -1
 while True:
-    msg = sock.read_message()
-    # The view-mapped event is emitted when a new window has been opened.
+    msg = sock.read_next_event()
     if "event" in msg:
         print(msg["event"])
         view = msg["view"]
@@ -20,11 +17,11 @@ while True:
         if last_focused_toplevel != new_focus:
             if last_focused_toplevel != -1 and new_focus != -1:
                 try:
-                    sock.set_view_alpha(last_focused_toplevel, 0.6)
+                    sock.set_view_alpha(last_focused_toplevel, 0.7)
                 except:
                     print("Last focused toplevel was closed?")
 
             if new_focus != -1:
-                sock.set_view_alpha(new_focus, 1.0)
+                sock.set_view_alpha(new_focus, 0.8)
 
             last_focused_toplevel = new_focus
