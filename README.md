@@ -34,7 +34,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 
 ## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=3ndsDxlkTrw)
-It is not necessary to install GNOME if you want a minimal desktop; you should look for an alternative method.
+(It is not necessary to install GNOME if you want a minimal desktop; you should look for an alternative method.)
   
 ## Dependencies for Archlinux
 ```
