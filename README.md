@@ -64,7 +64,7 @@ ninja -C build install
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
 ## Follow focus and inactive-alpha
--Set environment variable ~/.config/environment.d/environment.conf
+-Create the file and set environment variable ~/.config/environment.d/environment.conf
 ```
 WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 ```
