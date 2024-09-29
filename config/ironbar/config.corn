@@ -31,22 +31,22 @@ let {
       music_dir = "/home/bluebyt/Music"
     }
     
-    $SysInfo = { 
-    type = "sys_info"
-    interval.temps = 3
-    interval.disks = 300
-    interval.memory = 30
-    interval.cpu = 1
-    interval.networks = 3
+  $SysInfo = { 
+      type = "sys_info"
+      interval.temps = 3
+      interval.disks = 300
+      interval.memory = 30
+      interval.cpu = 1
+      interval.networks = 3
       
-     format = [
+  format = [
       " {cpu_percent}%"
       " {memory_percent}%"
       " {temp_c:coretemp-Package-id-0}°C"
       " {disk_free:/}GB"
-    ]
-    }
-
+     ]
+   }
+   
     $cava = {
         transition_type = "slide_end"
         transition_duration = 750
@@ -59,10 +59,10 @@ let {
       type = "volume"
       format = "{icon} {percentage}%"
       max_volume = 100
-      icons.volume_high = ""
-      icons.volume_medium = ""
-      icons.volume_low = ""
-      icons.muted = "󰝟"
+      icons.volume_high = " "
+      icons.volume_medium = " "
+      icons.volume_low = " "
+      icons.muted = "󰝟 "
       on_scroll_down = "wpctl set-volume @DEFAULT_SINK@ 2%-"
       on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
       tooltip = "{{/home/bluebyt/.config/ironbar/scripts/volume}}%"
@@ -165,6 +165,33 @@ let {
         ]
     }
     
+        $workprev = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "workprev"
+                class = "workprev"
+                label = ""
+                on_click = "!~/.config/ipc-scripts/go_previous_workspace.py"
+            }
+        ]
+    }
+    
+        $worknext = {
+        type = "custom"
+        bar = [ 
+            {
+                type = "button"
+                name = "worknext"
+                class = "worknext"
+                label = ""
+                on_click = "!~/.config/ipc-scripts/go_next_workspace.py"
+            }
+        ]
+    }
+
+        
     $pacman = {
         type = "custom"
         bar = [ 
@@ -184,8 +211,16 @@ let {
         interval = 600000
         cmd = "~/.config/ironbar/scripts/weather"
    }
+
+       $kbdd = {
+        name = "kbdd"
+        type = "script"
+        mode = "poll"
+        interval = 500
+        cmd = "~/.config/ironbar/scripts/klayout.sh"
+   }
    
-    $start = [ $music $work1 $work2 $work3 $focused ]
+    $start = [ $music $workprev $work1 $work2 $work3 $worknext $focused ]
     $center = [ $clock ]
     $end = [ $volume $pacman $SysInfo $wlogout ]
 }
