@@ -1,0 +1,18 @@
+layout {
+    pane split_direction="vertical"{
+        pane command="bpytop"
+
+     }    
+    pane split_direction="horizontal"{
+         pane focus=true{
+        cwd "~/.config"
+              } 
+    }
+    pane split_direction="horizontal"{
+         pane {
+        command "ranger"
+        cwd "~/Downloads"
+              } 
+    }
+    
+}
