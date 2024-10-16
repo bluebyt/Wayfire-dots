@@ -1,15 +1,33 @@
 set fish_greeting
+# source ~/.config/lscolors.csh
+# Set up fzf key bindings
+
 #neofetch --off --block_range 0 7
 #neofetch
 #neofetch --block_range 0 7
-#alias c="clear; neofetch --off --block_range 0 7"
-#neofetch --config ~/.config/neofetch/config_def.conf
-alias c="neofetch --block_range 0 7"
-#alias c="neofetch --kitty ~/Pictures/Nord/unsplash20.png"
-nitch
+alias c="clear"
+# alias c="clear; neofetch --off --block_range 0 7"
+# neofetch --config ~/.config/neofetch/config_def.conf
+# alias c="neofetch --block_range 0 7"
+# alias c="neofetch --kitty ~/Pictures/Nord/unsplash20.png"
+# nitch
 alias n='nitch'
+alias fox='catnip -c ~/.config/catnip/config_fox.toml'
+# alias ls='lsd -a'
+# alias ll='lsd -ahl'
+alias icat='kitten icat'
+alias cat='catnip' 
+catnip
+export LS_COLORS="*.ini=31:*.ttf=36:*.toml=35"
+alias ls='exa --icons -a'
+alias ll='exa --icons -ahl'
+alias exa1='exa --tree --level=1'
+alias exa2='exa --tree --level=2'
+alias exa3='exa --tree --level=3'
+
 #alias c="clear; neofetch --block_range 0 7"
 #export PATH="$"PATH":/home/bluebyt/.local/bin"
+set -x PATH $PATH ~/.bin
 set -x PATH $PATH ~/.local/bin
 set -x PATH $PATH ~/.local/bin/eww
 set -x PATH $PATH ~/.local/bin/go/bin/
@@ -28,5 +46,9 @@ alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 alias clean='sudo pacman -Sc' #removing old packages from cache
 #alias extract='for i in *.rar; do unrar x -o+ "$i"; end' 
-. ~/.config/fish/functions/noti.fish
+#. ~/.config/fish/functions/noti.fish
+
+set -x STARSHIP_CONFIG ~/.config/starship//starship.toml
 starship init fish | source
+zoxide init fish | source
+fzf --fish | source
