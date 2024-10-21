@@ -13,6 +13,9 @@ alias c="clear"
 # nitch
 alias n='nitch'
 alias fox='catnip -c ~/.config/catnip/config_fox.toml'
+alias fox2='catnip -c ~/.config/catnip/config_fox2.toml'
+alias fox3='catnip -c ~/.config/catnip/config_fox3.toml'
+
 # alias ls='lsd -a'
 # alias ll='lsd -ahl'
 alias icat='kitten icat'
@@ -48,7 +51,7 @@ alias clean='sudo pacman -Sc' #removing old packages from cache
 #alias extract='for i in *.rar; do unrar x -o+ "$i"; end' 
 #. ~/.config/fish/functions/noti.fish
 
-set -x STARSHIP_CONFIG ~/.config/starship//starship.toml
+set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
