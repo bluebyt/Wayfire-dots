@@ -16,7 +16,7 @@ Warning: This installation guide is for my future self. Some steps might not be 
 - [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
 - [Tokyonight-Dark](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) command: ./install.sh -d ~/.local/share/themes -c dark -l --tweaks black
-- [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme) [Aretha-Dark-Icons](https://www.gnome-look.org/p/2180417) 
+- [Tela-circle-icon-theme](https://github.com/vinceliuice/Tela-circle-icon-theme#tela-circle-icon-theme) or [Aretha-Dark-Icons](https://www.gnome-look.org/p/2180417) 
 - [Fish shell](https://github.com/fish-shell/fish-shell) Command line shell
 - [Startship prompt](https://starship.rs/) Customizable prompt
 - [Catnip](https://github.com/iinsertNameHere/catnip) A minimalistic and fast system fetch
