@@ -1,3 +1,4 @@
+
 ##############################################
 ##          FetchInfo stats Config          ##
 ##############################################
@@ -31,7 +32,9 @@ font   = "slant"
 margin = [0, 0, 0,]
 
 [misc.imageMode]
-enable = false
-path   = "/path/to/some/image.png" # Please use only absolute paths
-scale  = 18
-margin = [2, 2, 3,]
+enable = true
+path   = "/home/bluebyt/.config/catnip/dfo3.png"
+scale  = 22
+margin = [1, 5, 3,]
+# scale  = 18
+# margin = [5, 3, 1,]
