@@ -5,14 +5,14 @@ let {
     format = " %B %d  %H:%M"
    // format = "%d/%m/%Y %H:%M"
   }
-  
+
     $focused = {
       type = "focused"
       show_icon = false
       show_title = true
       icon_size = 24
-      icon_theme = "Tela-circle-nord" 
-      
+      icon_theme = "Tela-circle-nord"
+
       truncate.mode = "end"
       truncate.max_length = 25
     }
@@ -30,15 +30,15 @@ let {
       icons.next = ""
       music_dir = "/home/bluebyt/Music"
     }
-    
-  $SysInfo = { 
+
+  $SysInfo = {
       type = "sys_info"
       interval.temps = 3
       interval.disks = 300
       interval.memory = 30
       interval.cpu = 1
       interval.networks = 3
-      
+
   format = [
       " {cpu_percent}%"
       " {memory_percent}%"
@@ -46,7 +46,7 @@ let {
       " {disk_free:/}GB"
      ]
    }
-   
+
     $cava = {
         transition_type = "slide_end"
         transition_duration = 750
@@ -76,7 +76,7 @@ let {
     }
     $wlogout = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "wlogout"
@@ -86,10 +86,10 @@ let {
             }
         ]
     }
-    
+
         $work1 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work1"
@@ -99,10 +99,10 @@ let {
             }
         ]
     }
-    
+
             $work2 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work2"
@@ -112,10 +112,10 @@ let {
             }
         ]
     }
-  
+
               $work3 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work3"
@@ -125,10 +125,10 @@ let {
             }
         ]
     }
- 
+
                $work4 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work4"
@@ -138,10 +138,10 @@ let {
             }
         ]
     }
-    
+
                    $work5 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work5"
@@ -151,10 +151,10 @@ let {
             }
         ]
     }
-    
+
                        $work6 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
                 name = "work6"
@@ -164,37 +164,51 @@ let {
             }
         ]
     }
-    
-        $workprev = {
+
+                       $work7 = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "button"
-                name = "workprev"
-                class = "workprev"
-                label = ""
-                on_click = "!~/.config/ipc-scripts/go_previous_workspace.py"
-            }
-        ]
-    }
-    
-        $worknext = {
-        type = "custom"
-        bar = [ 
-            {
-                type = "button"
-                name = "worknext"
-                class = "worknext"
-                label = ""
-                on_click = "!~/.config/ipc-scripts/go_next_workspace.py"
+                name = "work7"
+                class = "work7"
+                label = "7"
+                on_click = "!~/.config/ipc-scripts/work7.py"
             }
         ]
     }
 
-        
+                        $work8 = {
+        type = "custom"
+        bar = [
+            {
+                type = "button"
+                name = "work8"
+                class = "work8"
+                label = "8"
+                on_click = "!~/.config/ipc-scripts/work8.py"
+            }
+        ]
+    }
+
+
+                        $work9 = {
+        type = "custom"
+        bar = [
+            {
+                type = "button"
+                name = "work9"
+                class = "work9"
+                label = "9"
+                on_click = "!~/.config/ipc-scripts/work9.py"
+            }
+        ]
+    }
+
+
     $pacman = {
         type = "custom"
-        bar = [ 
+        bar = [
             {
                 type = "label"
                 name = "pacman"
@@ -203,7 +217,7 @@ let {
                 }
         ]
     }
-    
+
     $weather = {
         name = "weather"
         type = "script"
@@ -219,10 +233,46 @@ let {
         interval = 500
         cmd = "~/.config/ironbar/scripts/klayout.sh"
    }
-   
-    $start = [ $music $workprev $work1 $work2 $work3 $worknext $focused ]
+
+    $zellij = {
+        type = "custom"
+        bar = [
+            {
+                type = "button"
+                name = "zellij"
+                class = "zellij"
+                label = " "
+                on_click = "!~/.config/scripts/zellij.sh"
+            }
+        ]
+    }
+//  $airpod = {
+//        name = "airpod"
+//        type = "script"
+//        mode = "watch"
+//     interval = 2000
+//      cmd = "~/.config/scripts/airpod3.sh --status"
+//     on_click_left = "~/.config/scripts/airpod3.sh --toggle"
+// }
+
+   $airpod = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "airpod"
+               class = "airpod"
+               mode = "watch"
+               label = "{{2000:~/.config/scripts/airpod3.sh --status}}"
+               on_click = "!~/.config/scripts/airpod3.sh --toggle"
+           }
+       ]
+   }
+
+
+    $start = [ $music $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 $focused ]
     $center = [ $clock ]
-    $end = [ $volume $pacman $SysInfo $wlogout ]
+    $end = [ $airpod $zellij $volume $pacman $SysInfo $wlogout ]
 }
 in {
         icon_theme = "Tela-circle-nord"
