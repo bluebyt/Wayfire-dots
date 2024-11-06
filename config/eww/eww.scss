@@ -1,41 +1,41 @@
 // GENERAL STUFF ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 *{
 	all: unset;
-	font-family: JetbrainsMono Nerd Font;
+	/* font-family: CaskaydiaCove Nerd Font Mono; */
+	font-family: JetBrains Mono NL;
 	font-size: 14px;
 }
 
-$white: #F8FBFC;
-$lightgray: #DFE2E3;
-$gray: #C5C8C9;
-$medgray: #797C7D;
-$darkgray: #46494A;
+$white: #c0caf5;
+$lightgray: #c0caf5;
+$gray: #797C7D;
+$medgray: #414868;
+$darkgray: #545c7e;
 $black: #1a1b26;
 
-$color1: #bf616a;
-$color2: #eba0ac;
-$color3: #d08770;
-$color4: #ebcb8b;
-$color5: #b48ead;
-$color6: #e9bdbd;
-$color7: #f5e0dc;
-$color8: #a3be8c;
-$color9: #a3be8c;
-$color10: #8fbcbb;
-$color11: #b48ead;
-$color12: #b48ead;
-$color13: #b48ead;
-$color14: #b48ead;
-$color15: #4e40d4;
-$color16: #5e81ac;
+$color1: #ff9e64;
+$color2: #ffc777;
+$color3: #ff9e64;
+$color4: #ff9e64;
+$color5: #9d7cd8;
+$color6: #c0caf5;
+$color7: #7aa2f7;
+$color8: #c3e88d;
+$color9: #c3e88d;
+$color10:#41a6b5;
+$color11: #bb9af7;
+$color12: #bb9af7;
+$color13: #bb9af7;
+$color15: #9d7cd8;
+$color16: #3d59a1;
+$color14: #bb9af7;
 $color17: #7aa2f7;
-$color18: #88c0d0;
-$color19: #d6ffff;
-$color20: #2e3440;
-$color21: #0D0E19;
+$color18: #b4f9f8;
+$color19: #7dcfff;
+$color20: #3b4261;
+$color21: #1f2335;
 $color22: rgba(13, 14, 25, 0.5);
-$color23: rgba(46, 52, 64, 0.8);
-/*$color23: rgba(82, 87, 98, 0.9);*/
+$color23: rgba(26,27,38,0.8);
 $color24: rgba(36, 40, 59, 0.5);
 $color25: rgba(13, 14, 25, 0.2);
 $color26: rgba(26, 27, 38, 0.2);
@@ -44,7 +44,6 @@ $color26: rgba(26, 27, 38, 0.2);
 	background-color: $color23;
 	border-radius: 14px;
 	margin: 0px 8px 8px 0px;
-	/* box-shadow: 8px 8px 5px rgba(13, 14, 25, 0.7); */
 	box-shadow: 1px 1px 3px 1px #151515;
 }
 button {
@@ -127,30 +126,30 @@ tooltip {
   background-color: $color22;
   border-radius: 10px;
 }
-.sys_icon_bat {
-  color: #afbea2;
-}
+
 .sys_icon_cpu {
 	font-size: 20;
-	margin: 22px;
+	margin: 24px;
 	color: $color17;
+	padding-right: 4px;
 }
 
 .sys_icon_tempe {
 	font-size: 20;
-	margin: 22px;
+	margin: 24px;
 	color: $color4;
 }
 .sys_icon_disk {
-	font-size: 16;
-	margin: 22px;
+	font-size: 20;
+	margin: 24px;
 	color: $color9;
 }
 
 .sys_icon_mem {
 	font-size: 20;
-	margin: 22px;
-    color: $color11;
+	margin: 24px;
+	color: $color11;
+	padding-right: 4px;
 }
 .sys_cpu_box {
     border-radius: 16px;
@@ -205,11 +204,11 @@ tooltip {
 }
 .network-up {
   color: $color14;
-  font-size: 20px;
+  font-size: 30px;
 }
 .network-down {
   color: $color17;
-  font-size: 20px;
+  font-size: 30px;
 }
 .network-graph-up {
 	color: $color14;
@@ -248,7 +247,7 @@ tooltip {
 }
 .date {
 	color: $color17;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: bold;
 	border-radius: 10px;
 }
@@ -325,7 +324,7 @@ calendar.highlight {
 }
 .weather-icon {
 	color: $color18;
-	font-size: 32px;
+	font-size: 34px;
 	font-weight: bold;
 	padding-right: 14px;
 }
@@ -342,6 +341,10 @@ calendar.highlight {
 .weather-desc {
 	color: $color7;
 	font-size: 16px;
+}
+
+.logout {
+	font-size: 54px;
 }
 
 // MUSIC ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -505,6 +508,6 @@ calendar.highlight {
 	color: $color4;
 }
 .keybind {
-	color: $color5;
+	color: $color4;
 }
 

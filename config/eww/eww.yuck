@@ -125,7 +125,7 @@
         (box :orientation "h" :width 130 
             (graph  :class "network-graph-up"
                     :thickness 2
-                    :value {round(EWW_NET.enp4s0.NET_UP / (1024 * 1024) ,1)}
+                    :value {round(EWW_NET.enp4s0.NET_UP / 1024 ,1)}
                     :time-range "2m"
                     :min 0
                     :max 101
@@ -284,8 +284,8 @@
 (defwindow sidebar
     :monitor 0
     :geometry (geometry :x "16px"
-                        :y "40px"
-                        :width "140px"
+                        :y "35px"
+                        :width "110px"
                         :height "60%"
                         :anchor "top left")
     :stacking "fg"
