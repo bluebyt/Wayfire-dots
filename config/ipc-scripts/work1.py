@@ -10,3 +10,4 @@ msg['data']['x'] = 0
 msg['data']['y'] = 0
 msg['data']['output-id'] = 1
 sock.send_json(msg)
+
