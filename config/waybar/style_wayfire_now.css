@@ -1,17 +1,17 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: Roboto Mono SemiBold, Iosevka Nerd Font;
-    font-size: 18px;
+    font-family: CaskaydiaCove Nerd Font;
+    font-size: 20px;
     font-style: normal;
+    font-weight: normal;
     min-height: 0;
-	}
-
-window#waybar {
-    background: rgba(76,86,106,0.8);
-    color: #cdd6f4
 }
 
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    /* background: rgba(76,86,106,0.8); */
+}
 
 #clock, 
 #pulseaudio, 
@@ -28,29 +28,66 @@ window#waybar {
 #custom-wlogout,
 #custom-wallchange,
 #window
+#custom-zscroll
+#custom-waybar-scrolling-mpris
+#custom-work1
+#custom-work2
+#custom-work3
+#custom-work4
+#custom-work5
+#custom-work6
+#custom-work7
+#custom-work8
+#custom-work9
+#custom-work1.active
+#custom-work2.active
+#custom-work3.active
+#custom-workspace_monitor
+#custom-title
 
 #cava{
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 10px;
+    border-radius: 16px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
     padding: 0px 10px 0px 10px;
-    font-weight: bold;     
+    background: #7dcfff;
+    color: #414868;
+    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
 }
-
-#custom-pacmanAlt{
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
+#custom-zscroll{
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;     
+    border-radius: 10px;
+    color: #c3e88d;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
-
+#custom-waybar-scrolling-mpris{
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #c3e88d;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+#custom-pacmanAlt {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #c3e88d;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
 #tray {
     background: #2e3440;
     margin: 5px 5px 5px 5px;
@@ -60,44 +97,65 @@ window#waybar {
 }
 
 #clock {
-    color: #cdd6f4;
-    background-color: #2e3440;
-    border-radius: 12px 12px 12px 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-weight: bold;
-    /*border-left: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    color: #7dcfff;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
-
 #network {
     background-color: #2e3440; 
-    color: #B48EAD;
-    border-radius: 10px;
-}
-
-#pulseaudio {
-    color: #5e81ac;
-    background: #2e3440;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    color: #bb9af7;
+    background: #1a1b26;
+    opacity: 0.8;
+}
+#pulseaudio {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    color: #bb9af7;
+    background: #1a1b26;
+    opacity: 0.8;
+}
+#pulseaudio.muted {
+    padding: 0px 25px 0 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    color: #ff007c;
+    background: #1a1b26;
+    opacity: 0.8;
 }
 
 #custom-launcher {
-    color: #cdd6f4;
-    background-color: #2e3440;
-    border-radius: 0px 24px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    padding: 0 20px 0 13px;
-    /*border-right: solid 1px #282738;*/
-    font-size: 20px;
+    padding: 0px 20px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: #9ece6a;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #custom-launcher button:hover {
@@ -109,74 +167,75 @@ window#waybar {
 }
 
 #custom-playerctl {
-	background: #2e3440;
-    padding: 0px 5px 0px 10px;
-	border-radius: 10px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin: 5px 7px;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16px;
+    padding: 0px 8px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    /*    color: #ffc777; */
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #custom-playerlabel {
-    background: transparent;
-    padding-left: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
+    padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-style: normal;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #9ece6a;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #window {
-    background: #2e3440;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 10px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
+    padding: 0px 10px;
     margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-style: normal;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #bb9af7;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #cpu {
-    background-color: #2e3440;
-    color: #bf616a;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+    border-radius: 10px;
+    color: #ff9e64;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #memory {
-    background-color: #2e3440;
-    color: #88c0d0;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+    border-radius: 10px;
+    color: #7dcfff;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #disk {
-    background-color: #2e3440;
-    color: #d08770;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+    border-radius: 10px;
+    color: #9ece6a;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #taskbar {
@@ -197,9 +256,15 @@ window#waybar {
     background-color: rgba(108, 122, 137, 1);
 }
 #temperature {
-  background-color: #2e3440;
-  color: #ebcb8b;
-  border-radius: 10px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #ff9e64;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #temperature.critical {
@@ -209,13 +274,66 @@ window#waybar {
 }
 
 #custom-wlogout {
-  background-color: #2e3440;
-  color: #BF616A;
-  border-radius: 10px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #ff9e64;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #custom-wallchange {
-  background-color: #2e3440;
-  color: #B48EAD;
-  border-radius: 10px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #9ece6a;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+
+
+#custom-work1,
+#custom-work2,
+#custom-work3 {
+    padding: 0px 20px 0px 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #7dcfff;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+
+/* Highlight specific workspaces based on active class */
+#custom-work1.active,
+#custom-work2.active,
+#custom-work3.active,
+#custom-work4.active,
+#custom-work5.active,
+#custom-work6.active,
+#custom-work7.active,
+#custom-work8.active,
+#custom-work9.active {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+#custom-title {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #bb9af7;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
