@@ -22,7 +22,7 @@
 }
 
 .wlogout {
-    padding: 0px 20px;
+    padding: 0px 15px 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 8px;
@@ -41,10 +41,10 @@
     opacity: 0.8;
 }
 .airpod {
-    padding: 0px 20px;
+    padding: 0px 15px 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    margin-right: 10px;
+    margin-right: 8px;
     border-radius: 10px;
     color: #ff757f;
     background: #1a1b26;
@@ -107,13 +107,22 @@
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
-
-.zellij,
 .pacman {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 10px;
+    border-radius: 10px;
+    color: #c3e88d;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+.zellij {
+    padding: 0px 7px 0px 9px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 8px;
     border-radius: 10px;
     color: #c3e88d;
     background: #1a1b26;
@@ -268,70 +277,26 @@
     box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
-.work1:hover {
-    color: #c3e88d;
-    background: #1a1b26;
+.work2 {
+    padding: 0px 10px 0px 10px; 
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 3px;
     border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
-.work2:hover {
     color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
     opacity: 0.8;
-}
-.work3:hover {
-    color: #c3e88d;
     background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
-.work4:hover {
-    color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
-.work5:hover {
-    color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
-.work6:hover {
-    color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
-.work7:hover {
-    color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
-.work8:hover {
-    color: #c3e88d;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.8;
-}
+
+.work1:hover,
+.work2:hover,
+.work3:hover,
+.work4:hover,
+.work5:hover,
+.work6:hover,
+.work7:hover,
+.work8:hover,
 .work9:hover {
     color: #c3e88d;
     background: #1a1b26;
@@ -342,16 +307,18 @@
 }
 
 .script {
-    padding: 0px 5px 0px 0px;
+    padding: 0px 10px 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 8px;
+    margin-left: 8px;
     border-radius: 10px;
     color: #9abdf5;
     background: #1a1b26;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
+
 .script:hover {
     color: #7dcfff;
     background: #1a1b26;
@@ -359,6 +326,19 @@
     min-width: 30px;
     transition: all 0.3s ease-in-out;
     opacity: 0.8;
+}
+
+.zscroll {
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+    margin-left: 10px;
+    color: #bb9af7;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 .music {
     border-radius: 10px;
@@ -455,3 +435,4 @@ tooltip * {
     min-width: 50px;
     opacity: 0.7;
 }
+
