@@ -1,6 +1,7 @@
 # Wayfire-dots
 Wayfire is a 3D Wayland compositor
 Warning: This installation guide is for my future self. Some steps might not be completed.
+This guide is for Archlinux and it doesn't provide any installer. 
 
 ![wayfire_screensho001](https://github.com/bluebyt/Wayfire-dots/assets/18442224/541acff1-62ed-4c53-9538-76b708600981)
 
