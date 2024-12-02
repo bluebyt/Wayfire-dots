@@ -2,11 +2,7 @@
 Wayfire is a 3D Wayland compositor
 Warning: This guide is for Archlinux and it doesn't provide any installer. Some steps might not be completed. 
 For more information, please refer to the Wayfire wiki [Wayfire wiki](https://github.com/WayfireWM/wayfire/wiki) 
-
-![wayfire_screensho001](https://github.com/bluebyt/Wayfire-dots/assets/18442224/541acff1-62ed-4c53-9538-76b708600981)
-
-
-![screenshotNordgithubnouveau2](https://github.com/bluebyt/Wayfire-dots/assets/18442224/9704b05f-0a7c-4abe-9ac4-0be1d0f57134)
+![screenshot_wayfire_2_dec_2024](https://github.com/user-attachments/assets/f7431fed-41bf-4759-a95d-dde97a58a868)
 
 [Install Wayfire on Youtubes](https://youtu.be/abtU54uMXH0)
 
