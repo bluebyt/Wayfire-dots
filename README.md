@@ -8,7 +8,7 @@ Warning:
 
 - For more information, please refer to the Wayfire wiki [Wayfire wiki](https://github.com/WayfireWM/wayfire/wiki)
   
-![screenshot_wayfire_2_dec_2024](https://github.com/user-attachments/assets/f7431fed-41bf-4759-a95d-dde97a58a868)
+![screenshot_wayfire_2_dec_2024ver2](https://github.com/user-attachments/assets/6ce465da-e8a9-45d5-a87c-8932cd7ae366)
 
 [Install Wayfire on Youtubes](https://youtu.be/abtU54uMXH0)
 
