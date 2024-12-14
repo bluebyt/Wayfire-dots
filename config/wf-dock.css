@@ -8,8 +8,8 @@ button:active {
   background-color: #ff757f;
 }
 
-button:focus {
-  background-color: #c0caf5;  
+button:not(.flat){
+background-color: #c0caf5;
 }
 
 window {  
