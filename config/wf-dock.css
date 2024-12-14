@@ -9,7 +9,7 @@ button:active {
 }
 
 button:not(.flat){
-background-color: #c0caf5;
+background: #737aa2;
 }
 
 window {  
