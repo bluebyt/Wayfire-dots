@@ -1,11 +1,11 @@
 button:hover {
-  background-color: #7dcfff;
+  background-color: #737aa2;
 /*  transition: 500ms ease-in-out; */
 }
 
 /* click with mouse */
 button:active {
-  background-color: #ff757f;
+  background-color: #7dcfff;
 }
 
 button:not(.flat){
