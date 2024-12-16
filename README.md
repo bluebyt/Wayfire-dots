@@ -7,8 +7,12 @@ Wayfire is a 3D Wayland compositor
   since GitHub does not support dragging files with a dot prefix (hidden files), they must be added manually.
 
 - For more information, please refer to the Wayfire wiki [Wayfire wiki](https://github.com/WayfireWM/wayfire/wiki)
-## Screenshot 
+## Screenshot with Pixdecor
 ![screenshot_wayfire_2_dec_2024ver2](https://github.com/user-attachments/assets/6ce465da-e8a9-45d5-a87c-8932cd7ae366)
+
+## Screenshot with a mix of GTK4 apps and Pixdecor 
+![GTK4_pixdecor](https://github.com/user-attachments/assets/58606e37-6f79-4ad9-b1cf-20cef66b1213)
+
 
 [Install Wayfire on Youtubes](https://youtu.be/abtU54uMXH0)
 
