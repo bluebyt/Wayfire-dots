@@ -37,7 +37,7 @@ Wayfire is a 3D Wayland compositor
 - Caskaydiacove nerd font
 
 ## Workflow
-- [Video on Youtubes](https://youtu.be/UAivOL47Qn4)
+- [Video on Youtubes](https://youtu.be/5dzgKCZbSlA)
 
 ## Install steps
 - [Install Archlinux Gnome desktop](https://youtu.be/5dzgKCZbSlA)
