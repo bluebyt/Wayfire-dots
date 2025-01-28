@@ -40,7 +40,7 @@ Wayfire is a 3D Wayland compositor
 - [Video on Youtubes](https://youtu.be/5dzgKCZbSlA)
 
 ## Install steps
-- [Install Archlinux Gnome desktop](https://youtu.be/5dzgKCZbSlA)
+- [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=8nlo7LewC5Q)
 (It is not necessary to install GNOME if you want a minimal desktop; you should look for an alternative method.)
   
 ## Dependencies for Archlinux
