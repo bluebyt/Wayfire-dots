@@ -3,9 +3,6 @@ Wayfire is a 3D Wayland compositor
 ## Warning 
 - This guide is for Archlinux and it doesn't provide any installer. Some steps might not be completed.
 
-- The ```bin``` and ```config``` folders are not preceded by a dot, as they should be. However,
-  since GitHub does not support dragging files with a dot prefix (hidden files), they must be added manually.
-
 - For more information, please refer to the Wayfire wiki [Wayfire wiki](https://github.com/WayfireWM/wayfire/wiki)
 ## Screenshot with Pixdecor
 ![screenshot_wayfire_2_dec_2024ver2](https://github.com/user-attachments/assets/6ce465da-e8a9-45d5-a87c-8932cd7ae366)
