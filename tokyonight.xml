@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<style-scheme id="tokyonight" name="tokyonight" version="1.0">
+  <author>bluebyt</author>
+
+  <metadata>
+    <property name="variant">dark</property>
+    <property name="light-variant">tokyonight</property>
+  </metadata>
+
+  <style name="text"                        foreground="#c0caf5" background="#1a1b26"/>
+  <style name="selection"                   background="#33467C"/>
+  <style name="search-match"                background="#3b4261"/>
+  <style name="cursor"                      foreground="#c0caf5"/>
+  <style name="current-line"                background="#292E42"/>
+  <style name="current-line-number"         foreground="#c0caf5" background="#292E42"/>
+  <style name="line-numbers"                foreground="#565F89" background="#1A1B26"/>
+  <style name="draw-spaces"                 foreground="#3B4261"/>
+  <style name="background-pattern"          background="#1E2030"/>
+  <style name="bracket-match"               background="#3B4261" bold="true"/>
+  <style name="bracket-mismatch"            underline="error" bold="true"/>
+  <style name="right-margin"                foreground="#3B4261" background="#1A1B26"/>
+  <style name="map-overlay"                 background="#1A1B26"/>
+  <style name="def:string"                  foreground="#9ECE6A"/>
+  <style name="def:type"                    foreground="#7AA2F7" bold="true"/>
+  <style name="def:comment"                 foreground="#565F89"/>
+  <style name="def:list-marker"             foreground="#E0AF68" bold="true"/>
+  <style name="def:heading"                 bold="true"/>
+  <style name="def:identifier"              foreground="#89DDFF"/>
+  <style name="def:preprocessor"            foreground="#BB9AF7"/>
+  <style name="def:keyword"                 foreground="#7AA2F7" bold="true"/>
+  <style name="def:variable"                foreground="#BB9AF7"/>
+  <style name="def:special-constant"        foreground="#F7768E" bold="true"/>
+  <style name="def:emphasis"                italic="true"/>
+  <style name="def:strong-emphasis"         italic="true" bold="true"/>
+  <style name="def:net-address"             foreground="#7AA2F7"/>
+  <style name="def:link-destination"        foreground="#7AA2F7"/>
+  <style name="def:link-text"               foreground="#7AA2F7"/>
+  <style name="def:floating-point"          foreground="#FF9E64"/>
+  <style name="def:decimal"                 foreground="#FF9E64"/>
+  <style name="def:base-n-integer"          foreground="#FF9E64"/>
+  <style name="def:boolean"                 foreground="#F7768E"/>
+  <style name="gtk-doc:function-name"       foreground="#7AA2F7"/>
+  <style name="gtk-doc:function"            foreground="#7AA2F7"/>
+  <style name="gtk-doc:parameter"           bold="true"/>
+  <style name="gtk-doc:constant"            bold="true"/>
+  <style name="gtk-doc:type"                bold="true"/>
+  <style name="gtk-doc:since"               bold="true"/>
+  <style name="gtk-doc:return"              bold="true"/>
+  <style name="gtk-doc:deprecated"          bold="true"/>
+  <style name="gtk-doc:signal-name"         bold="true"/>
+  <style name="gtk-doc:property-name"       bold="true"/>
+
+</style-scheme>
+
