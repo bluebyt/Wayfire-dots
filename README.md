@@ -34,6 +34,10 @@ Wayfire is a 3D Wayland compositor
 - Caskaydiacove nerd font
 - To use the Tokyonight theme in Gnome Text Editor, place it in this folder ~/.local/share/gtksourceview-5/styles
 
+## GUI wallpaper manager
+- [swww](https://github.com/LGFae/swww) Efficient animated wallpaper daemon for wayland
+- [Waypaper]([https://github.com/LGFae/swww) GUI wallpaper setter for Wayland frontend for swww
+
 ## Workflow
 - [Video on Youtubes](https://youtu.be/5dzgKCZbSlA)
 
