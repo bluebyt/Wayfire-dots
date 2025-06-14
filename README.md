@@ -31,6 +31,7 @@ Wayfire is a 3D Wayland compositor
 - [Xava](https://github.com/nikp123/xava#programming-opengl-shaders) Audio Visualizer
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) Terminal Music player
 - [Swappy](https://github.com/jtheoof/swappy) A Wayland native snapshot and editor tool
+- [Clipse](https://github.com/savedra1/clipse) TUI-based clipboard manager
 - Caskaydiacove nerd font
 - To use the Tokyonight theme in Gnome Text Editor, place it in this folder ~/.local/share/gtksourceview-5/styles
 
