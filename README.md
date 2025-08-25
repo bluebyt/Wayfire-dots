@@ -76,14 +76,14 @@ ninja -C build install
 ## Waybar modules for Wayfire (Workspace, Windows title, Language)
 All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
 
-The script `workspace_update_style_waybar.py` is used to highlight the currently active workspace in Waybar.
+- The script `workspace_update_style_waybar.py` is used to highlight the currently active workspace in Waybar.
 
-What it does: it updates the value of "custom-work" in the file `~/.config/waybar/workspace_wayfire_now.css` at line 22.
+- What it does: it updates the value of "custom-work" in the file `~/.config/waybar/workspace_wayfire_now.css` at line 22.
 
-If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
+- If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
 (Note: Python starts counting from 0, not 1.)
-![output3](https://github.com/user-attachments/assets/2d8ffedb-3683-40f5-86f7-7fee026ba6e6)
 
+![output3](https://github.com/user-attachments/assets/2d8ffedb-3683-40f5-86f7-7fee026ba6e6)
 
 
 ## Follow focus and inactive-alpha
@@ -96,4 +96,5 @@ WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 - Edit and add to $HOME/.config/wayfire.ini the following two line 
 - plugins = ipc ipc-rules follow-focus (ipc must be first)
 - [autostart] launcher = ~/.config/ipc-scripts/inactive-alpha.py
+- 
 ![output](https://github.com/bluebyt/Wayfire-dots/assets/18442224/7d4a0a2a-c415-488a-8063-2e72946b823a)
