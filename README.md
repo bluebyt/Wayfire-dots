@@ -73,8 +73,19 @@ ninja -C build install
 ## Running
 - Log out and select Wayfire in GNOME Display Manager (GDM) then log back in.
 
+## Waybar modules for Wayfire (Workspace, Windows title, Language)
+All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
+
+The script `workspace_update_style_waybar.py` is used to highlight the currently active workspace in Waybar.
+
+What it does: it updates the value of "custom-work" in the file `~/.config/waybar/workspace_wayfire_now.css` at line 22.
+
+If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
+(Note: Python starts counting from 0, not 1.)
+
+
 ## Follow focus and inactive-alpha
--Create the file and set environment variable ~/.config/environment.d/environment.conf
+-Create the file and set environment variable `~/.config/environment.d/environment.conf`
 ```
 WAYFIRE_SOCKET=/tmp/wayfire-wayland-1.socket
 ```
