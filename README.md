@@ -82,6 +82,8 @@ What it does: it updates the value of "custom-work" in the file `~/.config/wayba
 
 If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
 (Note: Python starts counting from 0, not 1.)
+![output3](https://github.com/user-attachments/assets/2d8ffedb-3683-40f5-86f7-7fee026ba6e6)
+
 
 
 ## Follow focus and inactive-alpha
