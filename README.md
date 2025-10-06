@@ -36,6 +36,7 @@ Wayfire is a 3D Wayland compositor
 - To use the Tokyonight theme in Gnome Text Editor, place it in this folder ~/.local/share/gtksourceview-5/styles
 - To use the Tokyonight theme in Kdenlive, copy the file here:
   /var/lib/flatpak/runtime/org.kde.Platform/x86_64/6.9/random number!/files/share/color-schemes/
+  Apply the theme in Settings/Color Scheme
 
 ## GUI wallpaper manager
 - [Swww](https://github.com/LGFae/swww) Efficient animated wallpaper daemon for wayland
