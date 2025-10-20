@@ -3,8 +3,8 @@
 local syntax = require "core.syntax"
 
 syntax.add {
-  name = "INI",
-  files = { "%.ini$", "%.inf$", "%.cfg$","%.sh$", "%.editorconfig$" },
+  name = "LOG",
+  files = { "%.log$" },
   comment = ';',
   patterns = {
     { pattern = ";.-\n", type = "comment" },
