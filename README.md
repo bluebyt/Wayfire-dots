@@ -86,7 +86,7 @@ All modules use the Wayfire IPC interface, and all Python scripts are located in
 - If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
 (Note: Python starts counting from 0, not 1.)
 
-![output3](https://github.com/user-attachments/assets/2d8ffedb-3683-40f5-86f7-7fee026ba6e6)
+![workspace-title-lang](https://github.com/user-attachments/assets/81b02b41-e832-418a-8660-04da74c60a66)
 
 
 ## Follow focus and inactive-alpha
