@@ -1,0 +1,14 @@
+[Unit]
+Description=Auto-restart My App
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/bluebyt/.config/xava/hyprl-xava.sh
+Restart=on-failure
+RestartSec=3
+Environment=DISPLAY=:0
+Environment=XDG_CURRENT_DESKTOP=wayfire
+Environment=WAYLAND_DISPLAY=wayland-1
+
+[Install]
+WantedBy=default.target
