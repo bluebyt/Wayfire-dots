@@ -25,7 +25,7 @@
 [window]
 
 # Window width and height (in pixels)
- width = 1100
+ width = 1180
  height = 90
 
 # Fullscreen toggle
@@ -52,7 +52,7 @@ alignment = 'bottom'
 # FXP. if alignment is set to right and x_padding is 20,
 # it will move the window left 20 pixels and so on for every direction
 ; x_padding = 0
-y_padding = 65
+y_padding = 10
 
 # This option removes the ability to interact with the window
 ; interactable = true
@@ -272,7 +272,7 @@ y_padding = 65
 #  - Under Windows 'default' uses your system accent color
 #  - And on any other 'default' is just black and cyan (the default colorscheme)
  background = default
- foreground = '#5e81ac'
+ foreground = '#3d59a1'
 
 # This adjusts the opacity of the bars (must have transparency for it to work)
  foreground_opacity = 0.6
@@ -284,9 +284,13 @@ y_padding = 65
 # defined in hex or remain commented out.
 # To enable gradients, just change gradient_count to the number of colors you
 # have specified (0 = disabled)
- gradient_count = 2
- gradient_color_1 = '#5e81ac'
- gradient_color_2 = '#b48ead'
+
+gradient = 1
+gradient_count = 4
+gradient_color_4 = '#ff3d61'
+gradient_color_3 = '#bb9af7'
+gradient_color_2 = '#7aa2f7'
+gradient_color_1 = '#7dcfff'
 
 
 [filter]
