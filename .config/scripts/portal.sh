@@ -1,3 +1,5 @@
-#!/bin/sh
-/usr/lib/xdg-desktop-portal &
-/usr/lib/xdg-desktop-portal-gtk &
+#!/usr/bin/env bash
+sleep 1
+killall xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-hyprland
+systemctl --user restart xdg-desktop-portal-wlr
+
