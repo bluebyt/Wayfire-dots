@@ -1,0 +1,12 @@
+[Unit]
+Description=Gracefully quit Firefox before shutdown or reboot
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+User=bluebyt
+ExecStart=/home/bluebyt/.bin/close-gracefully-browser.sh
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
