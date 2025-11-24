@@ -2,44 +2,31 @@
 # "Nautilus Open With Menu" 0.8
 # Copyright (C) 2018-2023 Romain F. T.
 #
-# "Nautilus Open With Menu" is free software; you can redistribute it and/or modify
+# This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
 # (at your option) any later version.
-# 
-# "Nautilus Open With Menu" is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# 
-# You should have received a copy of the GNU General Public License
-# along with "Create .desktop file"; if not, see http://www.gnu.org/licenses
-# for more information.
 
 import os, gi, gettext, urllib
-try:
-	gi.require_version("Nautilus", "4.0")
-except ValueError:
-	gi.require_version("Nautilus", "3.0")
-from gi.repository import Nautilus, Gtk, GObject, Gio, GLib
+gi.require_version("Gtk", "4.0")
+gi.require_version("Nautilus", "4.1")
 
-# TODO translations
+from gi.repository import Nautilus, Gtk, GObject, Gio, GLib
 
 class OpenWithMenu(GObject.GObject, Nautilus.MenuProvider):
     """'Open With…' Menu"""
+
     def __init__(self):
         pass
 
-    def get_file_items(self, *args):
-        """Nautilus invokes this function when building the menu on files."""
-        file_items = args[-1]
-        if not len(file_items):
-            return
-        return self._generate_menu(file_items)
+    def get_file_items_full(self, window, files):
+        """Compatible with Nautilus 4.1+"""
+        if not files:
+            return []
+        return self._generate_menu(files)
 
     def get_background_items(self, *args):
-        """Nautilus invokes this function when building the menu on the empty
-        background."""
+        """Nautilus invokes this function when building the menu on the empty background."""
         pass
 
     ############################################################################
@@ -77,23 +64,14 @@ class OpenWithMenu(GObject.GObject, Nautilus.MenuProvider):
     def _add_app_item(self, app, index):
         item_label = app.get_name()
         item_name = 'OpenWithMenu' + str(index)
-        # according to the documentation, the constructor has an 'icon'
-        # parameter but i don't understand how it works
         item = Nautilus.MenuItem(name=item_name, label=item_label, sensitive=True)
         item.connect('activate', self._open_with_app, app)
         return item
 
     def _open_with_app(self, menuitem, app):
         if app.supports_uris():
-            uris = []
-            for item in self.files:
-                uris.append(item.get_uri())
+            uris = [item.get_uri() for item in self.files]
             app.launch_uris(uris)
         elif app.supports_files():
-            files = []
-            for item in self.files:
-                files.append(item.get_location())
+            files = [item.get_location() for item in self.files]
             app.launch(files)
-
-    ############################################################################
-
