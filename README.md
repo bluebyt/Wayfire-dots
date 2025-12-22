@@ -61,7 +61,7 @@ cd wf-install
 ./install.sh --prefix /opt/wayfire --stream master
 ```
 ## Uninstall Wayfire
-Delete the folder /opt/wayfire/ and the file /usr/share/wayland-sessions/wayfire.desktop.
+Delete the folder `/opt/wayfire/` and the file `/usr/share/wayland-sessions/wayfire.desktop`
 
 ## Install Pixdecor
 ```
