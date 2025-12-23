@@ -17,7 +17,7 @@ while True:
         if last_focused_toplevel != new_focus:
             if last_focused_toplevel != -1 and new_focus != -1:
                 try:
-                    sock.set_view_alpha(last_focused_toplevel, 0.7)
+                    sock.set_view_alpha(last_focused_toplevel, 0.6)
                 except:
                     print("Last focused toplevel was closed?")
 

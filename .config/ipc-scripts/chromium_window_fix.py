@@ -7,7 +7,7 @@ from wayfire import WayfireSocket
 from wayfire.extra.ipc_utils import WayfireUtils
 
 # Configuration
-APP_ID = "brave-browser"
+APP_ID = "chromium"
 WORKSPACE_GRID_WIDTH = 3 # Assuming a 3x3 grid based on user's example script
 
 sock = WayfireSocket()

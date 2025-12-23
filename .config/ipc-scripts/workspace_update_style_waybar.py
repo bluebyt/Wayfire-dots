@@ -5,7 +5,7 @@ import time
 
 # Paths to the workspace script and style file
 workspace_script = os.path.expanduser("~/.config/ipc-scripts/active_workspace_number.py")
-style_file = os.path.expanduser("~/.config/waybar/style_wayfire_now.css")
+style_file = os.path.expanduser("~/.config/waybar/workspace_wayfire_now.css")
 
 def get_active_workspace():
     """Get the active workspace number from the workspace script."""
@@ -25,27 +25,27 @@ def update_specific_line(active_workspace):
         with open(style_file, "r") as file:
             lines = file.readlines()
 
-        # Ensure line 280 exists
-        if len(lines) < 320:
-            print(f"Error: {style_file} has fewer than 280 lines.")
+        # Ensure line xx exists
+        if len(lines) < 22:
+            print(f"Error: {style_file} has fewer than 69 lines.")
             return
 
         # Update line 280 directly
-        target_line = lines[319]  # Line 280 (zero-based index is 279)
+        target_line = lines[21]  # Line xx (zero-based index is xx)
         # Replace `.workX` while preserving the rest of the line
         updated_line = target_line.replace(
             target_line.split()[0], f"#custom-work{active_workspace}"
         )
         if updated_line != target_line:  # Only update if there's a change
-            lines[319] = updated_line
+            lines[21] = updated_line
 
             # Write back the modified lines to the file
             with open(style_file, "w") as file:
                 file.writelines(lines)
 
-            print(f"Updated {style_file}: Set line 280 to `.work{active_workspace}` with preserved content.")
+            print(f"Updated {style_file}: Set line 21 to `.work{active_workspace}` with preserved content.")
         else:
-            print(f"No changes needed; line 280 is already `.work{active_workspace}`.")
+            print(f"No changes needed; line 21 is already `.work{active_workspace}`.")
 
     except Exception as e:
         print(f"Error updating style file: {e}")
