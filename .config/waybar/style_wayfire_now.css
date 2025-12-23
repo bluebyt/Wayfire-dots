@@ -1,3 +1,5 @@
+@import "workspace_wayfire_now.css";
+
 * {
     border: none;
     border-radius: 0px;
@@ -14,78 +16,6 @@ window#waybar {
     /* background: rgba(76,86,106,0.8); */
 }
 
-#clock, 
-#pulseaudio, 
-#network, 
-#custom-launcher, 
-#custom-pacmanAlt,
-#cpu,
-#memory,
-#disk,
-#taskbar,
-#workspaces,
-#temperature,
-#custom-wlogout,
-#custom-wallchange,
-#window
-#custom-zscroll
-#custom-waybar-scrolling-mpris
-#custom-work1
-#custom-work2
-#custom-work3
-#custom-work4
-#custom-work5
-#custom-work6
-#custom-work7
-#custom-work8
-#custom-work9
-#custom-title
-#custom-updates
-#custom-keyboard-layout
-
-#cava{
-    border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    background: #7dcfff;
-    color: #414868;
-    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-}
-#custom-zscroll{
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-#custom-waybar-scrolling-mpris{
-    padding: 0px 10px 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-#custom-pacmanAlt {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
 #tray {
     background: #2e3440;
     margin: 5px 5px 10px 5px;
@@ -93,7 +23,23 @@ window#waybar {
     padding: 0px 10px;
     /*border-right: solid 1px #282738;*/
 }
-
+#custom-wlogout {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0.8;
+    background: #1a1b26;
+    color: #ff9e64;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    border-radius: 2px 12px 2px 12px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
+}
+#custom-wlogout:hover {
+    border-radius:12px 12px 12px 12px;      /* Oval */
+    background: #1a1b26;
+}
 #clock {
     margin-top: 5px;
     margin-bottom: 15px;
@@ -102,81 +48,94 @@ window#waybar {
     padding-left: 5px;
     padding-top: 3px;
     padding-bottom: 3px;
-    border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    background: #1a1b26;
+    color: #7dcfff;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    border-radius: 2px 12px 2px 12px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
+}
+#clock:hover {
+    border-radius:12px 12px 12px 12px;      /* Oval */
+    background: #1a1b26;
+}
+#hardware {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    opacity: 0.8;
+    background: #1a1b26;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    border-radius: 2px 12px 2px 12px;
+}
+
+#custom-keyboard-layout,
+#custom-airpod,
+#temperature,
+#disk,
+#memory,
+#cpu,
+#network,
+#custom-pacmanAlt,
+#pulseaudio {
+    padding: 0 10px;   /* this works 100% */
+    background: transparent;  /* remove borders if needed */
+    box-shadow: none;
+    margin: 0;
+}
+
+#custom-keyboard-layout {
+color: #bb9af7;
+}
+#custom-airpod {
+color: #9ece6a;
+}
+#temperature {
+color: #ff9e64;
+}
+#temperature.critical {
+  background-color: #a3be8c;
+}
+#disk {
+color: #9ece6a;
+}
+#memory {
+color: #7dcfff;
+}
+#cpu {
+color: #ff757f
 }
 #network {
-    background-color: #2e3440; 
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-    color: #bb9af7;
-    background: #1a1b26;
-    opacity: 0.8;
+color:  #7dcfff;
+}
+#custom-pacmanAlt {
+color: #c3e88d;
 }
 #pulseaudio {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-    color: #bb9af7;
-    background: #1a1b26;
-    opacity: 0.8;
+color: #bb9af7;
 }
-#pulseaudio.muted {
-    padding: 0px 25px 0 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-    color: #ff007c;
-    background: #1a1b26;
-    opacity: 0.8;
+#pulseaudio.muted
+{
+color: #ff007c;
 }
 
-#custom-launcher {
-    padding: 0px 20px 0px 10px;
+#bluetooth {
+    padding: 0px 5px 0px 5px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 5px;
-    margin-left: 5px;
     border-radius: 10px;
     color: #9ece6a;
     background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
 
-#custom-launcher button:hover {
-    background-color: #FB4934;
-    color: transparent;
-    border-radius: 10px;
-    margin-right: -5px;
-    margin-left: 10px;
-}
-
-#custom-playerctl {
-    padding: 0px 8px 0px 15px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    /*    color: #ffc777; */
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#custom-playerlabel {
+#custom-wallchange {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -185,46 +144,20 @@ window#waybar {
     color: #9ece6a;
     background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
-
-#window {
+#custom-title {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 10px;
-    border-radius: 10px;
+    opacity: 0.8;
+    background: #1a1b26;
     color: #bb9af7;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    border-radius: 12px 2px 12px 2px;
 }
-
-#cpu {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#memory {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#disk {
+#custom-recorder {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -233,9 +166,11 @@ window#waybar {
     color: #9ece6a;
     background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
-
+#custom-recorder.enabled {
+    color: red;
+}
 #taskbar {
     background-color: #2BD2FF;
     background-image: linear-gradient(45deg, #b48ead 0%, #5e81ac 52%, #b48ead 90%);
@@ -249,104 +184,10 @@ window#waybar {
     color: #ffffff;
     background-color: rgba(120,118,117,0.1);
 }
-
 #taskbar button.active {
     background-color: rgba(108, 122, 137, 1);
 }
-#temperature {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#temperature.critical {
-  background-color: #a3be8c;
-  color: #282738;
-  border-radius: 10px;
-}
-
-#custom-wlogout {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#custom-wallchange {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #9ece6a;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-
-#custom-work1,
-#custom-work2,
-#custom-work3,
-#custom-work4,
-#custom-work5,
-#custom-work6,
-#custom-work7,
-#custom-work8,
-#custom-work9 {
-    padding: 0px 10px 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-/* Highlight specific workspaces based on active class */ 
-#custom-work2 {
-    padding: 0px 15px 0px 15px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#custom-work1:hover,
-#custom-work2:hover,
-#custom-work3:hover,
-#custom-work4:hover,
-#custom-work5:hover,
-#custom-work6:hover,
-#custom-work7:hover,
-#custom-work8:hover,
-#custom-work9:hover {
-    color: #ff9e64;
-    background: #1a1b26;
-    border-radius: 10px;
-    min-width: 25px;
-    transition: all 0.4s ease-out;
-    opacity: 0.8;
-}
-
-#custom-title {
+#window {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -355,10 +196,21 @@ window#waybar {
     color: #bb9af7;
     background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+}
+#custom-playerctl {
+    padding: 0px 8px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    /*    color: #ffc777; */
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
 
-#custom-recorder {
+#custom-playerlabel {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -367,46 +219,57 @@ window#waybar {
     color: #9ece6a;
     background: #1a1b26;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
-#custom-recorder.enabled {
-    color: red;
-}
-#bluetooth {
-    padding: 0px 5px 0px 5px;
+#custom-launcher {
+    padding: 0px 20px 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 5px;
-    border-radius: 10px;
-    color: #9ece6a;
-    background: #1a1b26;
+    margin-left: 5px;
     opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    background: #1a1b26;
+    color: #9ece6a;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    border-radius: 12px 2px 12px 2px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
 }
-#custom-airpod {
-    padding: 0px 5px 0px 5px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+#custom-launcher:hover {
+    border-radius:12px 12px 12px 12px;      /* Oval */
+    background: #1a1b26;
+}
+#cava{
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
     margin-right: 5px;
-    border-radius: 10px;
-    color: #9ece6a;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+    padding: 0px 10px 0px 10px;
+    background: #7dcfff;
+    color: #414868;
+    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 4px 2px;
 }
-#custom-keyboard-layout {
-    background-color: #2e3440; 
+#custom-zscroll{
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 5px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-    color: #bb9af7;
+    border-radius: 12px 2px 12px 2px;
+    color: #c3e88d;
     background: #1a1b26;
     opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
 }
-
+#custom-waybar-scrolling-mpris{
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #c3e88d;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+}
 tooltip {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.8);

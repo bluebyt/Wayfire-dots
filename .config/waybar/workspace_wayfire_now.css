@@ -1,0 +1,50 @@
+#custom-work1,
+#custom-work2,
+#custom-work3,
+#custom-work4,
+#custom-work5,
+#custom-work6,
+#custom-work7,
+#custom-work8,
+#custom-work9 {
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 6px;
+    border-radius: 10px;
+    color: #7dcfff;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 4px 2px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Highlight specific workspaces based on active class */
+#custom-work2 {
+    padding: 0px 18px 0px 18px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 6px;
+/*    margin-left: 2px; */
+    border-radius: 10px;
+    color: #ff9e64;
+    background: #1a1b26;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+
+#custom-work1:hover,
+#custom-work2:hover,
+#custom-work3:hover,
+#custom-work4:hover,
+#custom-work5:hover,
+#custom-work6:hover,
+#custom-work7:hover,
+#custom-work8:hover,
+#custom-work9:hover {
+    color: #ff9e64;
+    background: #1a1b26;
+    border-radius: 10px;
+    min-width: 26px;
+/*  transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);*/
+    opacity: 0.8;
+}
