@@ -1,10 +1,19 @@
 let {
     $tray = { type = "tray" }
-  $clock = {
-    type = "clock"
-    format = " %B %d  %H:%M"
-   // format = "%d/%m/%Y %H:%M"
-  }
+    
+   $clock = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "clock"
+               class = "clock"
+               mode = "watch"
+               label = "{{100:~/.config/ironbar/clock_format.sh}}"
+               on_click = "!~/.config/ironbar/clock_format.sh --toggle"
+           }
+       ]
+   }
 
     $focused = {
       type = "focused"
@@ -40,10 +49,10 @@ let {
       interval.networks = 3
 
   format = [
-      " {cpu_percent}%"
-      " {memory_percent}%"
       " {temp_c:coretemp-Package-id-0}°C"
       " {disk_free:/}GB"
+      " {memory_percent}%"
+      " {cpu_percent}%"
      ]
    }
 
@@ -53,19 +62,19 @@ let {
         name = "cava"
         type = "script"
         mode = "watch"
-        cmd = "/home/bluebyt/.config/ironbar/scripts/cava"
+        cmd = "~/.config/ironbar/scripts/cava"
    }
     $volume = {
       type = "volume"
       format = "{icon} {percentage}%"
       max_volume = 100
       icons.volume_high = " "
-      icons.volume_medium = " "
-      icons.volume_low = " "
-      icons.muted = "󰝟 "
+      icons.volume_medium = ""
+      icons.volume_low = ""
+      icons.muted = "󰝟"
       on_scroll_down = "wpctl set-volume @DEFAULT_SINK@ 2%-"
       on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
-      tooltip = "{{/home/bluebyt/.config/ironbar/scripts/volume}}%"
+      tooltip = "{{~/.config/ironbar/scripts/volume}}%"
     }
 
     $workspace = {
@@ -95,7 +104,7 @@ let {
                 name = "work1"
                 class = "work1"
                 label = "1"
-                on_click = "!~/.config/ipc-scripts/work1.py"  
+                on_click = "!~/.config/ipc-scripts/work1.py"
                 on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
                 on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
             }
@@ -216,7 +225,7 @@ let {
                 label = "9"
                 on_click = "!~/.config/ipc-scripts/work9.py"
                 on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
-                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"               
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
             }
         ]
     }
@@ -228,7 +237,7 @@ let {
                 type = "label"
                 name = "pacman"
                 class = "pacman"
-                label = " {{600000:checkupdates | wc -l}}"
+                label = "󰮯 {{600000:checkupdates | wc -l}}"
                 }
         ]
     }
@@ -240,26 +249,19 @@ let {
         interval = 600000
         cmd = "~/.config/ironbar/scripts/weather"
    }
-      $workspace_monitor = {
-         type = "custom"
-         bar = [
-            {
-                type = "label"
-                name = "workspace_monitor"
-                class = "workspace_monitor"
-                label = "{{watch:2000:~/.config/ipc-scripts/workspace_monitor_ironbar.sh}}"
-            }
-        ]
-    }
-
-       $kbdd = {
-        name = "kbdd"
-        type = "script"
-        mode = "poll"
-        interval = 500
-        cmd = "~/.config/ironbar/scripts/klayout.sh"
+   $keyboard = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "keyboard"
+               class = "keyboard"
+               mode = "watch"
+               label = " {{100:~/.config/ipc-scripts/keyboard_layout.py}}"
+               on_click = "!~/.config/ipc-scripts/keyboard_layout_toggle.py"
+           }
+       ]
    }
-
     $zellij = {
         type = "custom"
         bar = [
@@ -301,10 +303,10 @@ let {
            }
        ]
    }
-   
-    $start = [ $zscroll $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 $focused ]
-    $center = [ $clock ]
-    $end = [ $airpod $zellij $volume $pacman $SysInfo $wlogout ]
+
+    $start = [ $zscroll $focused ]
+    $center = [ $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 ]
+    $end = [ $keyboard $airpod $SysInfo $pacman $volume $clock $wlogout ]
 }
 in {
         icon_theme = "Tela-circle-nord"
