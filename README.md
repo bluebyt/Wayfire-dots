@@ -47,8 +47,7 @@ Wayfire is a 3D Wayland compositor
 - [Video on Youtubes](https://youtu.be/5dzgKCZbSlA)
 
 ## Unofficial wiki
-- based on the original, with improved navigation and search
-- [Wiki](https://bluebyt.github.io/wayfire-docs/)
+- [Wiki](https://bluebyt.github.io/wayfire-docs/) based on the original, with improved navigation and search
 
 ## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=8nlo7LewC5Q)
