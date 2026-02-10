@@ -52,7 +52,23 @@ Wayfire is a 3D Wayland compositor
 ## Install steps
 - [Install Archlinux Gnome desktop](https://www.youtube.com/watch?v=8nlo7LewC5Q)
 (It is not necessary to install GNOME if you want a minimal desktop; you should look for an alternative method.)
-  
+
+## About Wayfire installation
+
+Wayfire does not interfere with your system.  
+It is installed entirely under:
+
+- `/opt/wayfire`
+
+The configuration files are located in your home directory:
+
+- `~/.config/wayfire.ini`
+- `~/.config/wf-shell.ini`
+
+The Wayland session entry is installed here:
+
+- `/usr/share/wayland-sessions/wayfire.desktop`
+
 ## Dependencies for Archlinux
 ```
 sudo pacman -S freetype2 glm libdrm libevdev libgl libinput libjpeg libpng libxkbcommon libxml2 pixman wayland-protocols wlroots meson cmake doctest doxygen nlohmann-json libnotify base-devel pkg-config autoconf gobject-introspection gtk-layer-shell scour libdbusmenu-gtk3 gtkmm3 glib2-devel boost
