@@ -83,8 +83,9 @@ ninja -C build install
 ## Running
 - Log out and select Wayfire in the login manager (GDM, SDDM) then log back in.
 
-## Waybar modules for Wayfire (Workspace, Windows title, Language)
+## Custom Waybar modules for Wayfire (Workspace, Windows title, Language)
 All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
+- Waybar now have a workspace and windows module [Waybar modules](https://github.com/Alexays/Waybar/wiki/Module:-Wayfire)
 
 - The script `workspace_update_style_waybar.py` is used to highlight the currently active workspace in Waybar.
 
