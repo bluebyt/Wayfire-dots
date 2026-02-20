@@ -18,6 +18,7 @@ Wayfire is a 3D Wayland compositor
 - [Pixdecor](https://github.com/soreau/pixdecor) Decorator plugin for wayfire, pixdecor features antialiased rounded corners with shadows and optional animated effects.
 - [Waybar](https://github.com/Alexays/Waybar) Highly customizable Wayland bar for Sway and Wlroots based compositors.
 - [Waybar modules](https://github.com/Alexays/Waybar/wiki/Module:-Wayfire) Workspace and Window modules.
+- [Ironbar](https://github.com/JakeStanger/ironbar) Highly customizable Wayland bar for Sway and Wlroots based compositors.
 - [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
 - [Tokyonight-Dark](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) command: ./install.sh -d ~/.local/share/themes -c dark -l --tweaks black
@@ -99,15 +100,14 @@ ninja -C build install
 ## Running
 - Log out and select Wayfire in the login manager (GDM, SDDM) then log back in.
 
-## Custom Waybar modules for Wayfire (Workspace, Windows title, Language)
+## Custom Ironbar modules for Wayfire (Workspace, Windows title, Language)
 All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
-- Waybar now have a workspace and windows module [Waybar modules](https://github.com/Alexays/Waybar/wiki/Module:-Wayfire)
 
-- The script `workspace_update_style_waybar.py` is used to highlight the currently active workspace in Waybar.
+- The script `workspace_update_style_ironbar.py` is used to highlight the currently active workspace in Waybar.
 
-- What it does: it updates the value of "custom-work" in the file `~/.config/waybar/workspace_wayfire_now.css` at line 22.
+- What it does: it updates the value of "custom-work" in the file `~/.config/ironbar/style_now.css` at line 67.
 
-- If you change `workspace_wayfire_now.css`, don’t forget to also update the values in `workspace_update_style_waybar.py` at lines 29, 34, and 40.
+- If you change `style.css`, don’t forget to also update the values in `workspace_update_style_ironbar.py` at lines 29, 34, and 40.
 (Note: Python starts counting from 0, not 1.)
 
 ![workspace-title-lang](https://github.com/user-attachments/assets/81b02b41-e832-418a-8660-04da74c60a66)
