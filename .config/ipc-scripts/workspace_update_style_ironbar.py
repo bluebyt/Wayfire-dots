@@ -25,27 +25,27 @@ def update_specific_line(active_workspace):
         with open(style_file, "r") as file:
             lines = file.readlines()
 
-        # Ensure line 280 exists
-        if len(lines) < 290:
+        # Ensure line 21 exists
+        if len(lines) < 67:
             print(f"Error: {style_file} has fewer than 280 lines.")
             return
 
         # Update line 280 directly
-        target_line = lines[289]  # Line 280 (zero-based index is 279)
-        # Replace `.workX` while preserving the rest of the line
+        target_line = lines[66]  # Line 280 (zero-based index is 279)
+        # Replace `.work/////X` while preserving the rest of the line
         updated_line = target_line.replace(
             target_line.split()[0], f".work{active_workspace}"
         )
         if updated_line != target_line:  # Only update if there's a change
-            lines[289] = updated_line
+            lines[66] = updated_line
 
             # Write back the modified lines to the file
             with open(style_file, "w") as file:
                 file.writelines(lines)
 
-            print(f"Updated {style_file}: Set line 280 to `.work{active_workspace}` with preserved content.")
+            print(f"Updated {style_file}: Set line 66 to `.work{active_workspace}` with preserved content.")
         else:
-            print(f"No changes needed; line 280 is already `.work{active_workspace}`.")
+            print(f"No changes needed; line 66 is already `.work{active_workspace}`.")
 
     except Exception as e:
         print(f"Error updating style file: {e}")
@@ -62,4 +62,3 @@ if __name__ == "__main__":
             time.sleep(1)  # Check every second
     except KeyboardInterrupt:
         print("Script stopped.")
-
