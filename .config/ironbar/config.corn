@@ -1,6 +1,19 @@
 let {
     $tray = { type = "tray" }
-    
+
+    $wlogout = {
+        type = "custom"
+        bar = [
+            {
+                type = "button"
+                name = "wlogout"
+                class = "wlogout"
+                label = ""
+                on_click = "!~/.config/ironbar/scripts/wlogout"
+            }
+        ]
+    }
+   
    $clock = {
        type = "custom"
        bar = [
@@ -9,60 +22,10 @@ let {
                name = "clock"
                class = "clock"
                mode = "watch"
-               label = "{{100:~/.config/ironbar/clock_format.sh}}"
-               on_click = "!~/.config/ironbar/clock_format.sh --toggle"
+               label = "{{100:~/.config/ironbar/scripts/clock_format.sh}}"
+               on_click = "!~/.config/ironbar/scripts/clock_format.sh --toggle"
            }
        ]
-   }
-
-    $focused = {
-      type = "focused"
-      show_icon = false
-      show_title = true
-      icon_size = 24
-      icon_theme = "Tela-circle-nord"
-
-      truncate.mode = "end"
-      truncate.max_length = 25
-    }
-
-    $music = {
-      type = "music"
-      player_type = "mpd"
-      format = "{title}/{artist}"
-      truncate = "end"
-      // truncate.length = 30
-      // truncate.max_length = 100
-      icons.play = " "
-      icons.pause = " "
-      icons.prev = ""
-      icons.next = ""
-      music_dir = "/home/bluebyt/Music"
-    }
-
-  $SysInfo = {
-      type = "sys_info"
-      interval.temps = 3
-      interval.disks = 300
-      interval.memory = 30
-      interval.cpu = 1
-      interval.networks = 3
-
-  format = [
-      " {temp_c:coretemp-Package-id-0}°C"
-      " {disk_free:/}GB"
-      " {memory_percent}%"
-      " {cpu_percent}%"
-     ]
-   }
-
-    $cava = {
-        transition_type = "slide_end"
-        transition_duration = 750
-        name = "cava"
-        type = "script"
-        mode = "watch"
-        cmd = "~/.config/ironbar/scripts/cava"
    }
     $volume = {
       type = "volume"
@@ -76,6 +39,58 @@ let {
       on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
       tooltip = "{{~/.config/ironbar/scripts/volume}}%"
     }
+    $pacman = {
+       type = "custom"
+       bar = [
+            {
+                type = "label"
+                name = "pacman"
+                class = "pacman"
+                label = "󰮯 {{600000:checkupdates | wc -l}}"
+                }
+        ]
+    }
+    
+    $SysDisk = {
+      type = "sys_info"
+      class = "sys-disk"
+      interval.disks = 300
+      format = [ " {disk_free:/}GB" ]
+      tooltip = "{{~/.config/ironbar/scripts/disk_usage.sh}}"
+   }
+   
+    $SysCpu = {
+      type = "sys_info"
+      class = "sys-cpu"
+      interval.cpu = 1
+      format = [ " {cpu_percent}%" ]
+      tooltip = "CPU usage"
+    }
+    
+    $SysTemp = {
+      type = "sys_info"
+      class = "sys-temp"
+      interval.temps = 3
+      format = [ " {temp_c:coretemp-Package-id-0}°C" ]
+      tooltip = "Temp usage"
+     }
+
+    $SysMem = {
+       type = "sys_info"
+       class = "sys-mem"
+       interval.memory = 30
+       format = [ " {memory_percent}%" ]
+       tooltip = "Memory usage"
+    }
+
+    $cava = {
+        transition_type = "slide_end"
+        transition_duration = 750
+        name = "cava"
+        type = "script"
+        mode = "watch"
+        cmd = "~/.config/ironbar/scripts/cava"
+   }
 
     $workspace = {
         type = "workspaces"
@@ -83,18 +98,7 @@ let {
         on_scroll_up = "hyprctl dispatch workspace -1"
         on_scroll_down = "hyprctl dispatch workspace +1"
     }
-    $wlogout = {
-        type = "custom"
-        bar = [
-            {
-                type = "button"
-                name = "wlogout"
-                class = "wlogout"
-                label = ""
-                on_click = "!~/.config/ironbar/scripts/wlogout"
-            }
-        ]
-    }
+
 
            $work1 = {
         type = "custom"
@@ -230,18 +234,6 @@ let {
         ]
     }
 
-    $pacman = {
-        type = "custom"
-        bar = [
-            {
-                type = "label"
-                name = "pacman"
-                class = "pacman"
-                label = "󰮯 {{600000:checkupdates | wc -l}}"
-                }
-        ]
-    }
-
     $weather = {
         name = "weather"
         type = "script"
@@ -249,6 +241,21 @@ let {
         interval = 600000
         cmd = "~/.config/ironbar/scripts/weather"
    }
+
+      $airpod = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "airpod"
+               class = "airpod"
+               mode = "watch"
+               label = "{{2000:~/.config/scripts/airpod3.sh --status}}"
+               on_click = "!~/.config/scripts/airpod3.sh --toggle"
+           }
+       ]
+   }
+   
    $keyboard = {
        type = "custom"
        bar = [
@@ -262,32 +269,31 @@ let {
            }
        ]
    }
-    $zellij = {
-        type = "custom"
-        bar = [
-            {
-                type = "button"
-                name = "zellij"
-                class = "zellij"
-                label = " "
-                on_click = "!~/.config/scripts/zellij.sh"
-            }
-        ]
+ 
+    $focused = {
+      type = "focused"
+      show_icon = false
+      show_title = true
+      icon_size = 24
+      icon_theme = "Tela-circle-nord"
+
+      truncate.mode = "end"
+      truncate.max_length = 25
     }
 
-   $airpod = {
-       type = "custom"
-       bar = [
-           {
-               type = "button"
-               name = "airpod"
-               class = "airpod"
-               mode = "watch"
-               label = "{{2000:~/.config/scripts/airpod3.sh --status}}"
-               on_click = "!~/.config/scripts/airpod3.sh --toggle"
-           }
-       ]
-   }
+    $music = {
+      type = "music"
+      player_type = "mpd"
+      format = "{title}/{artist}"
+      truncate = "end"
+      // truncate.length = 30
+      // truncate.max_length = 100
+      icons.play = " "
+      icons.pause = " "
+      icons.prev = ""
+      icons.next = ""
+      music_dir = "/home/bluebyt/Music"
+    }
 
   $zscroll = {
       type = "custom"
@@ -306,7 +312,7 @@ let {
 
     $start = [ $zscroll $focused ]
     $center = [ $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 ]
-    $end = [ $keyboard $airpod $SysInfo $pacman $volume $clock $wlogout ]
+    $end = [ $keyboard $airpod $SysMem $SysTemp $SysCpu $SysDisk $pacman $volume $clock $wlogout ]
 }
 in {
         icon_theme = "Tela-circle-nord"
