@@ -105,7 +105,7 @@ All modules use the Wayfire IPC interface, and all Python scripts are located in
 
 - The script `workspace_update_style_ironbar.py` is used to highlight the currently active workspace in Waybar.
 
-- What it does: it updates the value of "custom-work" in the file `~/.config/ironbar/style_now.css` at line 67.
+- What it does: it updates the value of the active workspace in the file `~/.config/ironbar/style.css` at line 67.
 
 - If you change `style.css`, don’t forget to also update the values in `workspace_update_style_ironbar.py` at lines 29, 34, and 40.
 (Note: Python starts counting from 0, not 1.)
