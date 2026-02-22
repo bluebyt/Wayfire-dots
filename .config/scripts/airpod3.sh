@@ -4,7 +4,7 @@
 device_address="60:93:16:0D:F9:59"
 
 # Get the connection status of the device
-connection_status=$(bluetoothctl info $device_address | grep "Connected:" | awk '{print $2}')
+connection_status=$(echo -e "info $device_address" | bluetoothctl | grep "Connected:" | awk '{print $2}')
 
 # Here we determine status based on connection status
 if [ "$connection_status" == "yes" ]; then
@@ -29,9 +29,9 @@ fi
 status_str () {
 # Check the status and print the corresponding icon
 if [ "$status" == "connected" ]; then
-    echo "  "  # Icon for connected
+    echo " "  # Icon for connected
 elif [ "$status" == "disconnected" ]; then
-    echo "  "  # Icon for disconnected
+    echo ""  # Icon for disconnected
 fi
 }
 
