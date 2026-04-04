@@ -1,0 +1,330 @@
+.wf-panel .launcher,
+.wf-panel .launcher:hover,
+.wf-panel .tray-button,
+.wf-panel .tray-button:hover {
+    background: unset;
+    border: unset;
+    box-shadow: unset;
+    padding-left: unset;
+    padding-right: unset;
+}
+
+.wf-panel .tray-button image,
+.wf-panel .launcher image {
+    transition: 500ms linear;
+    -gtk-icon-transform: scale(0.8);
+}
+
+.wf-panel .launcher:hover image,
+.wf-panel .tray-button:hover image {
+    transition: 500ms linear;
+    -gtk-icon-transform: scale(1.2);
+}
+
+.wf-panel .battery label,
+.wf-panel .battery:hover label,
+.wf-panel .window-button label,
+.wf-panel .window-button:hover label,
+.wf-panel .tray-button,
+.wf-panel .tray-button:hover,
+.wf-panel .notification button {
+    padding-left: 5px;
+}
+
+.wf-panel .notification .time {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wf-panel .tray .tray-button:first-child,
+.wf-panel .notification button:first-child {
+    padding-left: 0px;
+}
+
+.wf-panel .weather image {
+    -gtk-icon-size: 25px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+}
+
+.wf-panel .weather label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.wf-panel .network label {
+    padding-left: 6px;
+}
+
+.wf-panel .command-output.icon-left label {
+    padding-left: 5px;
+}
+
+.wf-panel .command-output.icon-right label {
+    padding-right: 5px;
+}
+
+.wf-panel .command-output.icon-top label {
+    padding-top: 5px;
+}
+
+.wf-panel .command-output.icon-bottom label {
+    padding-bottom: 5px;
+}
+
+.wf-panel .language {
+    min-width: 48px;
+}
+
+.wf-panel .language label {
+    background-color: #24283b;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    color: #41a6b5;
+}
+
+.wf-panel .workspace-switcher {
+    background-color: #1a1b26ff;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    padding-left: 0px;
+}
+
+.wf-panel .workspace-switcher .workspace.active {
+    background-color: #7aa2f7ff;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.wf-panel .workspace-switcher .workspace.inactive {
+    background-color: #24283bff;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.wf-panel .workspace-switcher .workspace .view {
+    background-color: #41486888;
+    border: 1px solid #414868;
+}
+
+.wf-panel .workspace-switcher .workspace .view.active {
+    background-color: #bb9af7;
+    border: 1px solid #414868;
+}
+
+.wf-panel .workspace-switcher .workspace .view.inactive {
+    background-color: #c0caf5;
+    border: 1px solid #414868;
+}
+
+.wf-panel {
+    border-radius: 26px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 6px;
+}
+
+
+.excellent {
+    color: #00ff00;
+}
+
+.good {
+    color: #88ff00;
+}
+
+.ok {
+    color: #ffff00;
+}
+
+.weak {
+    color: #ff8800;
+}
+
+.none {
+    color: #ff0000;
+}
+
+/* dock */
+
+.wf-dock,
+.wf-dock .out-box {
+    background: transparent;
+    padding-top: 20px;
+}
+
+.wf-dock .box {
+    background-color: #1a1b2699;
+    padding: 2px 12px;
+    border-radius: 1em;
+    box-shadow: 0px -4px 18px rgba(0, 0, 0, 0.55);
+}
+
+.wf-dock button {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.wf-dock {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.wf-dock button.activated {
+    background: #737aa2;
+    border-top: 3px transparent;
+    border-bottom: 3px transparent;
+    border-radius: 1em;
+    margin: 0;
+}
+
+.wf-dock image {
+    -gtk-icon-size: 64px;
+    -gtk-icon-transform: scale(0.8);
+    transition: 200ms ease;
+}
+
+.wf-dock image:hover {
+    background: transparent;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    transition: 200ms;
+    -gtk-icon-transform: scale(1);
+}
+
+.wf-dock image {
+    animation-name: embiggen;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.wf-dock .closing image {
+    animation-name: kromulent;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Dock end */
+
+.wf-locker .password{
+    padding: 10px;
+    border-radius: 10px;
+    background: #0004;
+}
+.wf-locker .fingerprint-overlay-image.good {
+    color: #0f0;
+}
+.wf-locker .fingerprint-overlay-image.bad {
+    color: #f00;
+}
+.wf-locker .fingerprint-overlay-image.info {
+    color: #88f;
+}
+
+.wf-locker .user label {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.wf-locker image.weather {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 100px;
+}
+.wf-locker label.weather {
+    font-weight: bold;
+    padding-left: 100px;
+    padding-bottom: 75px;
+}
+.wf-locker label.clock {
+    font-weight: bold;
+    padding-right: 100px;
+    padding-bottom: 75px;
+}
+
+.wf-locker .failure {
+    animation-name: shake;
+    animation-duration:0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.wf-locker.sized-480 {
+    font-size:6px;
+}
+
+.wf-locker.sized-720 {
+    font-size:7px;
+}
+
+.wf-locker.sized-1080 {
+    font-size:10px;
+}
+
+.wf-locker.sized-1440 {
+    font-size:14px;
+}
+
+.wf-locker.sized-2160 {
+    font-size:18px;
+}
+
+@keyframes embiggen {
+    to {
+        -gtk-icon-size: 64px;
+        -gtk-icon-transform: translateY(0px);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    from {
+        -gtk-icon-size: 0px;
+        -gtk-icon-transform: translateY(64px);
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@keyframes kromulent {
+    from {
+        -gtk-icon-size: 64px;
+        -gtk-icon-transform: translateY(0px);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    to {
+        -gtk-icon-size: 0px;
+        -gtk-icon-transform: translateY(64px);
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(20px);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
