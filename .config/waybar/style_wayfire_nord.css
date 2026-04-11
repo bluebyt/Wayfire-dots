@@ -1,0 +1,374 @@
+/* @import "workspace_wayfire_now.css"; */
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: MesloLGS Nerd Font; 
+    font-size: 19px;
+    font-style: normal;
+    font-weight: normal;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+#tray {
+    background: #3b4252;
+    margin: 5px 5px 10px 5px;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+#custom-wlogout {
+    padding: 0px 5px 0px 2px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0.8;
+    background: #3b4252;
+    color: #d08770; /* Nord Aurora Orange */
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    border-radius: 19px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
+}
+
+#custom-wlogout:hover {
+    border-radius: 14px;
+    background: #3b4252;
+}
+
+#clock {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    opacity: 0.8;
+    background: #3b4252;
+    color: #88c0d0; /* Nord Frost Cyan */
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    border-radius: 19px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
+}
+
+#clock:hover {
+    border-radius: 14px;
+    background: #3b4252;
+}
+
+#hardware {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    opacity: 0.8;
+    background: #3b4252;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    border-radius: 19px;
+}
+    
+#custom-keyboard-layout,
+#custom-airpod,
+#temperature,
+#disk,
+#memory,
+#cpu,
+#network,
+#custom-pacmanAlt,
+#pulseaudio {
+    background: transparent;
+    box-shadow: none;
+    padding: 0 9px;
+}
+
+#custom-keyboard-layout {
+    color: #b48ead; /* Nord Aurora Purple */
+}
+
+#custom-airpod {
+    color: #a3be8c; /* Nord Aurora Green */
+}
+
+#temperature {
+    color: #ebcb8b; /* Nord Aurora Yellow */
+}
+
+#temperature.critical {
+  background-color: #bf616a; /* Nord Aurora Red */
+}
+
+#disk {
+    color: #a3be8c;
+}
+
+#memory {
+    color: #8fbcbb; /* Nord Frost Blue-ish */
+}
+
+#cpu {
+    color: #bf616a;
+}
+
+#network {
+    color: #81a1c1; /* Nord Frost Blue */
+}
+
+#custom-pacmanAlt {
+    color: #a3be8c;
+}
+
+#pulseaudio {
+    color: #b48ead;
+}
+
+#pulseaudio.muted {
+    color: #4c566a; /* Nord Polar Night Grey */
+}
+
+#bluetooth {
+    padding: 0px 5px 0px 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #81a1c1;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-wallchange {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #a3be8c;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-title {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    opacity: 0.8;
+    background: #3b4252;
+    color: #b48ead;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    border-radius: 19px;
+}
+
+#custom-recorder {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #bf616a;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-recorder.enabled {
+    color: #bf616a;
+}
+
+#taskbar {
+    background-color: #5e81ac;
+    background-image: linear-gradient(45deg, #5e81ac 0%, #81a1c1 52%, #5e81ac 90%);
+    border-radius: 8px;
+}
+
+#taskbar button {
+    border-radius: 2px 2px 2px 2px;
+    padding: 0 0 0 1px;
+    margin: 4px 4px;
+    color: #eceff4;
+    background-color: rgba(76, 86, 106, 0.3);
+}
+
+#taskbar button.active {
+    background-color: #4c566a;
+}
+
+#window {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #88c0d0;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-playerctl {
+    padding: 0px 8px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-playerlabel {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #a3be8c;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-launcher {
+    padding: 0px 20px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0.8;
+    background: #3b4252;
+    color: #81a1c1;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    border-radius: 19px;
+    transition: border-radius 0.35s ease, background 0.25s ease;
+}
+
+#custom-launcher:hover {
+    border-radius: 14px;
+    background: #3b4252;
+}
+
+#cava{
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    background: #88c0d0;
+    color: #3b4252;
+    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 4px 2px;
+}
+
+#custom-zscroll{
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 19px;
+    color: #a3be8c;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-waybar-scrolling-mpris{
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #a3be8c;
+    background: #3b4252;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: rgba(46, 52, 64, 0.9);
+  opacity: 0.9;
+}
+
+tooltip label {
+  color: #d8dee9;
+}
+
+#custom-updates {
+  color: #d8dee9;
+  padding: 0 10px;
+}
+
+#custom-updates.updates-available {
+  color: #ebcb8b;
+}
+
+#custom-updates.no-updates {
+  color: #4c566a;
+}
+
+#workspaces {
+    background: #3b4252;
+    padding: 0px 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 19px;    
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 16px;
+    color: #eceff4;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    color: #d8dee9;
+    background-color: #3b4252;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+ #workspaces button.active {
+    color: #eceff4;
+    background: #4c566a;
+    border-radius: 19px;
+    min-width: 50px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: #434c5e;
+    border-radius: 15px;
+    min-width: 50px;
+    opacity: 0.7;
+}
+
+#workspaces button.focused {
+    background: #88c0d0;
+    background: linear-gradient(
+        120deg,
+        #81a1c1 0%,
+        #88c0d0 45%,
+        #8fbcbb 100%
+    );
+    color: #3b4252;
+    border-radius: 15px;
+    min-width: 50px;
+    opacity: 0.8;
+}
