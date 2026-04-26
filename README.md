@@ -103,7 +103,7 @@ ninja -C build install
 ## Custom Ironbar modules for Wayfire (Workspace, Windows title, Language)
 All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
 
-- The script `monitor_workspacs.py` is used to highlight the currently active workspace.
+- The script `monitor_workspaces.py` is used to highlight the currently active workspace.
 
 ![workspace-title-lang](https://github.com/user-attachments/assets/81b02b41-e832-418a-8660-04da74c60a66)
 
