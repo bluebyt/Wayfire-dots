@@ -4,7 +4,7 @@
     font-size: 19px;
 }
 .workspaces {
-    background: #1a1b26;
+    background: #2e3440;
     padding: 5px 5px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -15,7 +15,7 @@
     font-style: normal;
     opacity: 0.8;
     font-size: 16px;
-    color: #ffffff;
+    color: #eceff4;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .workspaces button {
@@ -23,22 +23,22 @@
     margin: 0px 1px;
     border-radius: 19px;
     border: 0px;
-    color: #c0caf5;
-    background-color: #3b4261;
+    color: #d8dee9;
+    background-color: #3b4252;
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
 }
 .workspaces .item.focused {
-    color: #ffffff;
-    background: #545c7e;
+    color: #eceff4;
+    background: #4c566a;
     border-radius: 19px;
     min-width: 50px;
     transition: all 0.3s ease-in-out;
     opacity: 1;
 }
 .workspaces button:hover {
-    color: #ffffff;
-    background: #545c7e;
+    color: #eceff4;
+    background: #4c566a;
     border-radius: 15px;
     min-width: 50px;
     opacity: 0.7;
@@ -57,25 +57,13 @@
     margin-bottom: 15px;
     margin-right: 6px;
     border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* Highlight specific workspaces based on active class */
-.work4 {
-    padding: 0px 15px 0px 15px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 6px;
-    /*    margin-left: 2px; */
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-}
+
 .work1:hover,
 .work2:hover,
 .work3:hover,
@@ -85,71 +73,81 @@
 .work7:hover,
 .work8:hover,
 .work9:hover {
-    color: #ff9e64;
-    background: #1a1b26;
+    padding: 0px 15px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 6px;
     border-radius: 10px;
-    min-width: 26px;
+    color: #2e3440;
+    background: #88c0d0;
     opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
+
+.active {
+    background: transparent;
+    box-shadow: none;
+}
+
+.active button {
+    padding: 0px 15px 0px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 6px;
+    border-radius: 10px;
+    color: #2e3440;
+    background: #88c0d0;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+#custom-keyboard-layout,
+#custom-airpod,
+#temperature,
+#disk,
+#memory,
+#cpu,
+#network,
+#custom-pacmanAlt,
+#pulseaudio {
+    background: transparent;
+    box-shadow: none;
+    padding: 0 9px;
+}
+
 .cava {
     padding: 0px 20px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 8px;
     border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
-
 .background {
     background-color: rgba(0, 0, 0, 0);
 }
-
 .wlogout {
     padding: 0px 15px 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #ff757f;
-    background: #1a1b26;
+    color: #bf616a;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .wlogout:hover {
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     border-radius: 10px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
     opacity: 0.8;
 }
-/* 
-.sysinfo .item:nth-child(1) {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-}
-.sysinfo .item:nth-child(2) {
-    padding: 0px 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-right: 0px;
-    border-radius: 10px;
-    color: #9ece6a;
-    background: #1a1b26;
-    opacity: 0.8;
-    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-}
-*/
 .volume {
     padding: 0px 10px;
     margin-top: 5px;
@@ -157,17 +155,16 @@
     margin-right: 3px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    color: #9abdf5;
-    background: #1a1b26;
+    color: #81a1c1;
+    background: #2e3440;
     opacity: 0.8;
 }
 .popup-volume {
     padding: 20px 20px 20px 20px;
     border-radius: 5px;
-    color: #c0caf5;
-    /* background: #1a1b26; */
-    background-color: rgba(26, 27, 38, 0.8);
-    border: 2px solid #bb9af7;
+    color: #d8dee9;
+    background-color: rgba(46, 52, 64, 0.8);
+    border: 2px solid #b48ead;
 }
 .pacman {
     padding: 0px 10px;
@@ -175,8 +172,8 @@
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
+    color: #a3be8c;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
@@ -186,59 +183,58 @@
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #9ece6a;
-    background: #1a1b26;
+    color: #a3be8c;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    }
+}
 .sys-cpu {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #bb9af7;
-    background: #1a1b26;
+    color: #b48ead;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    }
+}
 .sys-temp {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
+    color: #ebcb8b;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    }
+}
 .sys-mem {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    }
-
+}
 .zellij {
     padding: 0px 7px 0px 9px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
     border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
+    color: #a3be8c;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .zellij:hover {
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     border-radius: 10px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
@@ -250,12 +246,11 @@
     margin-bottom: 15px;
     margin-right: 8px;
     border-radius: 10px;
-    color: #ff9e64;
-    background: #1a1b26;
+    color: #ebcb8b;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
-
 .clock {
     font-family: CaskaydiaCove Nerd Font;
     margin-top: 5px;
@@ -266,45 +261,37 @@
     padding-left: 10px;
     padding-bottom: 3px;
     border-radius: 10px;
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
-
 .clock_date {
-    color: rgb(94, 129, 172);
+    color: #81a1c1;
 }
-
 .popup-clock {
     font-weight: bolder;
-    background-color: rgba(26, 27, 38, 0.8);
+    background-color: rgba(46, 52, 64, 0.8);
     border-radius: 10px;
-    border: 2px solid #bb9af7;
+    border: 2px solid #b48ead;
 }
-
 .popup-clock .calendar-clock {
-    color: #c0caf5;
-    /*  font-size: 2.5em; */
+    color: #d8dee9;
     padding-bottom: 0.1em;
 }
-
 .popup-clock .calendar {
-    background-color: rgba(26, 27, 38, 0.8);
-    color: #c0caf5;
+    background-color: rgba(46, 52, 64, 0.8);
+    color: #d8dee9;
     border-radius: 10px;
 }
-
 .popup-clock .calendar .header {
     padding-top: 1em;
-    border-top: 1px solid #424242;
+    border-top: 1px solid #4c566a;
     font-size: 1.5em;
 }
-
 .popup-clock .calendar:selected {
-    background-color: #3d59a1;
+    background-color: #5e81ac;
 }
-
 .focused {
     padding: 0px 10px;
     margin-top: 5px;
@@ -313,12 +300,22 @@
     margin-left: 5px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    color: #bb9af7;
-    background: #1a1b26;
+    color: #b48ead;
+    background: #2e3440;
     opacity: 0.8;
-    /* top right bottom left */
 }
-
+.title {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+    margin-left: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    color: #b48ead;
+    background: #2e3440;
+    opacity: 0.8;
+}
 .clipboard {
     padding: 0px 10px;
     margin-top: 5px;
@@ -326,18 +323,18 @@
     margin-right: 8px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-    color: #9abdf5;
-    background: #1a1b26;
+    color: #81a1c1;
+    background: #2e3440;
     opacity: 0.8;
 }
 .popup-clipboard {
     margin-left: 5px;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
-    color: #c0caf5;
-    background: #1a1b26;
-    background-color: rgba(26, 27, 38, 0.8);
-    border: 2px solid #bb9af7;
+    color: #d8dee9;
+    background: #2e3440;
+    background-color: rgba(46, 52, 64, 0.8);
+    border: 2px solid #b48ead;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .script {
@@ -347,14 +344,14 @@
     margin-right: 8px;
     margin-left: 8px;
     border-radius: 10px;
-    color: #9abdf5;
-    background: #1a1b26;
+    color: #81a1c1;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .script:hover {
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     border-radius: 10px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
@@ -366,14 +363,14 @@
     margin-bottom: 15px;
     margin-right: 8px;
     border-radius: 10px;
-    color: #c3e88d;
-    background: #1a1b26;
+    color: #a3be8c;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 .airpod:hover {
-    color: #7dcfff;
-    background: #1a1b26;
+    color: #88c0d0;
+    background: #2e3440;
     border-radius: 10px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
@@ -385,8 +382,8 @@
     margin-bottom: 15px;
     margin-right: 8px;
     border-radius: 10px;
-    color: #bb9af7;
-    background: #1a1b26;
+    color: #b48ead;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
@@ -397,8 +394,8 @@
     margin-bottom: 15px;
     margin-right: 5px;
     margin-left: 7px;
-    color: #c3e88d;
-    background: #1a1b26;
+    color: #a3be8c;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
@@ -409,8 +406,8 @@
     margin-bottom: 15px;
     margin-right: 7px;
     margin-left: 10px;
-    color: #bb9af7;
-    background: #1a1b26;
+    color: #b48ead;
+    background: #2e3440;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
@@ -418,14 +415,11 @@
     margin-left: 5px;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
-    color: #c0caf5;
-    background: #1a1b26;
-    background-color: rgba(26, 27, 38, 0.8);
-    border: 2px solid #bb9af7;
+    color: #d8dee9;
+    background: #2e3440;
+    background-color: rgba(46, 52, 64, 0.8);
+    border: 2px solid #b48ead;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
-}
-
-.popup-music.volume {
 }
 .popup-music .volume .slider {
     padding: 2px 2px 2px 2px;
@@ -434,25 +428,17 @@
     margin-right: 5px;
     margin-left: 5px;
 }
-.popup-music .volume .icon {
-}
-
 tooltip.background {
-    background-color: rgba(00, 00, 00, 0.5);
+    background-color: rgba(46, 52, 64, 0.5);
     font-size: 18px;
     border-radius: 10px;
-    color: #fdfdfd;
+    color: #eceff4;
 }
-
 tooltip * {
     padding: 4px;
     background-color: transparent;
-    color: white;
+    color: #eceff4;
 }
-
 .host tooltip {
-    background-color: rgba(255, 00, 00, 0.5);
+    background-color: rgba(191, 97, 106, 0.5);
 }
-
-
-
