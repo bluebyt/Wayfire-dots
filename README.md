@@ -16,8 +16,6 @@ Wayfire is a 3D Wayland compositor
 ## Details
 - [Wayfire](https://github.com/WayfireWM/wayfire) is a 3D wayland compositor
 - [Pixdecor](https://github.com/soreau/pixdecor) Decorator plugin for wayfire, pixdecor features antialiased rounded corners with shadows and optional animated effects.
-- [Waybar](https://github.com/Alexays/Waybar) Highly customizable Wayland bar for Sway and Wlroots based compositors.
-- [Waybar modules](https://github.com/Alexays/Waybar/wiki/Module:-Wayfire) Workspace and Window modules.
 - [Ironbar](https://github.com/JakeStanger/ironbar) Highly customizable Wayland bar for Sway and Wlroots based compositors.
 - [eww](https://github.com/elkowar/eww) Widget on the left
 - [Mako](https://github.com/emersion/mako) notification
