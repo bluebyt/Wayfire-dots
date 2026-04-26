@@ -103,12 +103,7 @@ ninja -C build install
 ## Custom Ironbar modules for Wayfire (Workspace, Windows title, Language)
 All modules use the Wayfire IPC interface, and all Python scripts are located in the .config/ipc-scripts folder.
 
-- The script `workspace_update_style_ironbar.py` is used to highlight the currently active workspace in Waybar.
-
-- What it does: it updates the value of the active workspace in the file `~/.config/ironbar/style.css` at line 67.
-
-- If you change `style.css`, don’t forget to also update the values in `workspace_update_style_ironbar.py` at lines 29, 34, and 40.
-(Note: Python starts counting from 0, not 1.)
+- The script `monitor_workspacs.py` is used to highlight the currently active workspace.
 
 ![workspace-title-lang](https://github.com/user-attachments/assets/81b02b41-e832-418a-8660-04da74c60a66)
 
