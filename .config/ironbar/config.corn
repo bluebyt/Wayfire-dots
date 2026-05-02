@@ -35,6 +35,9 @@ let {
       icons.volume_medium = ""
       icons.volume_low = ""
       icons.muted = "󰝟"
+      truncate.mode = "end"
+      truncate.length = 10
+      truncate.max_length = 40
       on_scroll_down = "wpctl set-volume @DEFAULT_SINK@ 2%-"
       on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
       tooltip = "{{~/.config/ironbar/scripts/volume}}%"
@@ -47,7 +50,7 @@ let {
                type = "label"
                name = "pacman"
                class = "pacman"
-               label = "󰮯 {{2000:~/.config/scripts/package-updates.sh}}"
+               label = "󰮯 {{15000:~/.config/scripts/package-updates.sh}}"
            }
        ]
    }
@@ -56,7 +59,7 @@ let {
       type = "sys_info"
       class = "sys-disk"
       interval.disks = 300
-      format = [ " {disk_percent@/}%" ] 
+      format = [ " {disk_percent@/}%" ]
       tooltip = "{{~/.config/ironbar/scripts/disk_usage.sh}}"
    }
 
@@ -216,7 +219,7 @@ let {
     }
 
                         $work8 = {
-        type = "custom"                
+        type = "custom"
         name = "work8"
         bar = [
             {
@@ -230,7 +233,7 @@ let {
         ]
     }
                         $work9 = {
-        type = "custom"                 
+        type = "custom"
         name = "work9"
         bar = [
             {
@@ -260,8 +263,8 @@ let {
                name = "airpod"
                class = "airpod"
                mode = "watch"
-               label = "{{2000:~/.config/scripts/airpod3.sh --status}}"
-               on_click = "!~/.config/scripts/airpod3.sh --toggle"
+               label = "{{2000:~/.config/scripts/airpod.sh --status}}"
+               on_click = "!~/.config/scripts/airpod.sh --toggle"
            }
        ]
    }
@@ -315,16 +318,61 @@ let {
        ]
    }
 
-    $start = [ $zscroll $title ]
+
+   $clock2 = {
+    type = "custom"
+    bar = [
+        {
+            type = "box"
+            class = "clock-container"
+            orientation = "vertical"
+            valign = "center"
+            widgets = [
+                {
+                    type = "label"
+                    class = "clock-time"
+                    label = " {{1000:date +'%H:%M:%S'}}"
+                }
+                {
+                    type = "label"
+                    class = "clock-date"
+                    label = "{{60000:date +'%A, %B %d'}}"
+                }
+            ]
+        }
+    ]
+}
+
+$workspacename = {
+    type = "custom"
+    bar = [
+        {
+            type = "box"
+            class = "workspace-container"
+            orientation = "vertical"
+            valign = "center"
+            widgets = [
+                {
+                    type = "label"
+                    class = "workspace-name"
+                    label = "{{watch:2000:~/.config/ipc-scripts/active_name.py}}"
+                }
+                {
+                    type = "label"
+                    class = "workspace-number"
+                    label = "Desktop {{watch:2000:~/.config/ipc-scripts/active_workspace.py}}"
+                }
+            ]
+        }
+    ]
+}
+
+    $start = [ $zscroll $workspacename $title ]
     $center = [ $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 ]
-    $end = [ $airpod $keyboard $SysMem $SysTemp $SysCpu $SysDisk $pacman $volume $clock $wlogout ]
+    $end = [ $airpod $keyboard $SysMem $SysTemp $SysCpu $SysDisk $pacman $volume $clock2 $wlogout ]
 }
 
 in {
-
-ironvar_defaults = {
-    active_ws = "1"
-}
 
         icon_theme = "Tela-circle-nord"
         position = "top"
@@ -332,4 +380,3 @@ ironvar_defaults = {
         center = $center
         end = $end
 }
-

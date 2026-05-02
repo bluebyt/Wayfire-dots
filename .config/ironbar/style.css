@@ -1,8 +1,9 @@
 .container {
     font-family: MesloLGSDZ Nerd Font;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 19px;
 }
+
 .workspaces {
     background: #2e3440;
     padding: 5px 5px;
@@ -59,6 +60,7 @@
     border-radius: 10px;
     color: #88c0d0;
     background: #2e3440;
+    font-weight: bold;
     opacity: 0.8;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -130,7 +132,7 @@
     background-color: rgba(0, 0, 0, 0);
 }
 .wlogout {
-    padding: 0px 15px 0px 10px;
+    padding: 5px 10px 5px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
@@ -148,11 +150,12 @@
     transition: all 0.3s ease-in-out;
     opacity: 0.8;
 }
+
 .volume {
     padding: 0px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    margin-right: 3px;
+    margin-right: 7px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
     color: #81a1c1;
@@ -161,11 +164,16 @@
 }
 .popup-volume {
     padding: 20px 20px 20px 20px;
-    border-radius: 5px;
-    color: #d8dee9;
+    border-radius: 10px;
+    color: #81a1c1;
     background-color: rgba(46, 52, 64, 0.8);
-    border: 2px solid #b48ead;
+    opacity: 0.8;
 }
+
+.popup-volume .apps-box .app-box .title {
+    color: #81a1c1;
+}
+
 .pacman {
     padding: 0px 10px;
     margin-top: 5px;
@@ -441,4 +449,53 @@ tooltip * {
 }
 .host tooltip {
     background-color: rgba(191, 97, 106, 0.5);
+}
+
+.clock-container {
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+    border-radius: 10px;
+    background: #2e3440;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    transition: none;
+}
+
+.clock-time {
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    color: #ebcb8b;
+}
+
+.clock-date {
+    padding: 0px 0px 0px 0px;
+    font-size: 0.55em;
+    color: #a3be8c;
+    font-weight: bold;
+}
+
+.workspace-container {
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 2px;
+    border-radius: 10px;
+    background: #2e3440;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    transition: none;
+}
+
+.workspace-name {
+    padding: 0px 0px 0px 0px;
+    color: #ebcb8b;
+}
+.workspace-number {
+    padding: 0px 0px 0px 0px;
+    font-size: 11px;
+    font-size: 0.55em;
+    font-weight: bold;
+    color: #a3be8c;
 }
