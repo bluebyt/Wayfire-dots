@@ -1,0 +1,382 @@
+let {
+    $tray = { type = "tray" }
+
+    $wlogout = {
+        type = "custom"
+        bar = [
+            {
+                type = "button"
+                name = "wlogout"
+                class = "wlogout"
+                label = ""
+                on_click = "!~/.config/ironbar/scripts/wlogout"
+            }
+        ]
+    }
+
+   $clock = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "clock"
+               class = "clock"
+               mode = "watch"
+               label = "{{100:~/.config/ironbar/scripts/clock_format.sh}}"
+               on_click = "!~/.config/ironbar/scripts/clock_format.sh --toggle"
+           }
+       ]
+   }
+    $volume = {
+      type = "volume"
+      format = "{icon} {percentage}%"
+      max_volume = 100
+      icons.volume_high = " "
+      icons.volume_medium = ""
+      icons.volume_low = ""
+      icons.muted = "󰝟"
+      truncate.mode = "end"
+      truncate.length = 10
+      truncate.max_length = 40
+      on_scroll_down = "wpctl set-volume @DEFAULT_SINK@ 2%-"
+      on_scroll_up = "wpctl set-volume @DEFAULT_SINK@ 2%+"
+      tooltip = "{{~/.config/ironbar/scripts/volume}}%"
+    }
+
+   $pacman = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "pacman"
+               class = "pacman"
+               label = "󰮯 {{15000:~/.config/scripts/package-updates.sh}}"
+           }
+       ]
+   }
+
+    $SysDisk = {
+      type = "sys_info"
+      class = "sys-disk"
+      interval.disks = 300
+      format = [ " {disk_percent@/}%" ]
+      tooltip = "{{~/.config/ironbar/scripts/disk_usage.sh}}"
+   }
+
+    $SysCpu = {
+      type = "sys_info"
+      class = "sys-cpu"
+      interval.cpu = 1
+      format = [ " {cpu_percent}%" ]
+      tooltip = "CPU usage"
+    }
+
+    $SysTemp = {
+      type = "sys_info"
+      class = "sys-temp"
+      interval.temps = 3
+      format = [ " {temp_c:coretemp-Package-id-0}°C" ]
+      tooltip = "Temp usage"
+     }
+
+    $SysMem = {
+       type = "sys_info"
+       class = "sys-mem"
+       interval.memory = 30
+       format = [ " {memory_percent}%" ]
+       tooltip = "Memory usage"
+    }
+
+   $keyboard = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "keyboard"
+               class = "keyboard"
+               mode = "watch"
+               label = " {{100:~/.config/ipc-scripts/keyboard_layout.py}}"
+               on_click = "!~/.config/ipc-scripts/keyboard_layout_toggle.py"
+           }
+       ]
+   }
+
+   $title = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "title"
+               class = "title"
+               label = " {{watch:2000:~/.config/ipc-scripts/title.py}}"
+           }
+       ]
+   }
+
+           $work1 = {
+        type = "custom"
+        name = "work1"
+        bar = [
+            {
+                type = "button"
+                class = "work1"
+                label = "1"
+                on_click = "!~/.config/ipc-scripts/work1.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+            $work2 = {
+        type = "custom"
+        name = "work2"
+        bar = [
+            {
+                type = "button"
+                class = "work2"
+                label = "2"
+                on_click = "!~/.config/ipc-scripts/work2.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+              $work3 = {
+        type = "custom"
+        name = "work3"
+        bar = [
+            {
+                type = "button"
+                class = "work3"
+                label = "3"
+                on_click = "!~/.config/ipc-scripts/work3.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+               $work4 = {
+        type = "custom"
+        name = "work4"
+        bar = [
+            {
+                type = "button"
+                class = "work4"
+                label = "4"
+                on_click = "!~/.config/ipc-scripts/work4.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+                   $work5 = {
+        type = "custom"
+        name = "work5"
+        bar = [
+            {
+                type = "button"
+                class = "work5"
+                label = "5"
+                on_click = "!~/.config/ipc-scripts/work5.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+                       $work6 = {
+        type = "custom"
+        name = "work6"
+        bar = [
+            {
+                type = "button"
+                class = "work6"
+                label = "6"
+                on_click = "!~/.config/ipc-scripts/work6.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+                       $work7 = {
+        type = "custom"
+        name = "work7"
+        bar = [
+            {
+                type = "button"
+                class = "work7"
+                label = "7"
+                on_click = "!~/.config/ipc-scripts/work7.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+                        $work8 = {
+        type = "custom"
+        name = "work8"
+        bar = [
+            {
+                type = "button"
+                class = "work8"
+                label = "8"
+                on_click = "!~/.config/ipc-scripts/work8.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+                        $work9 = {
+        type = "custom"
+        name = "work9"
+        bar = [
+            {
+                type = "button"
+                class = "work9"
+                label = "9"
+                on_click = "!~/.config/ipc-scripts/work9.py"
+                on_scroll_up = "~/.config/ipc-scripts/wayfire_work_next.py"
+                on_scroll_down = "~/.config/ipc-scripts/wayfire_work_prev.py"
+            }
+        ]
+    }
+
+    $weather = {
+        name = "weather"
+        type = "script"
+        mode = "poll"
+        interval = 600000
+        cmd = "~/.config/ironbar/scripts/weather"
+   }
+
+      $airpod = {
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "airpod"
+               class = "airpod"
+               mode = "watch"
+               label = "{{2000:~/.config/scripts/airpod.sh --status}}"
+               on_click = "!~/.config/scripts/airpod.sh --toggle"
+           }
+       ]
+   }
+
+     $cava = {
+        transition_type = "slide_end"
+        transition_duration = 750
+        name = "cava"
+        type = "script"
+        mode = "watch"
+        cmd = "~/.config/ironbar/scripts/cava"
+   }
+
+    $focused = {
+      type = "focused"
+      show_icon = false
+      show_title = true
+      icon_size = 24
+      icon_theme = "Tela-circle-nord"
+
+      truncate.mode = "end"
+      truncate.max_length = 21
+    }
+
+    $music = {
+      type = "music"
+      player_type = "mpd"
+      format = "{title}/{artist}"
+      truncate = "end"
+      // truncate.length = 30
+      // truncate.max_length = 100
+      icons.play = " "
+      icons.pause = " "
+      icons.prev = ""
+      icons.next = ""
+      music_dir = "/home/bluebyt/Music"
+    }
+
+  $zscroll = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "zscroll"
+               class = "zscroll"
+               label = "{{watch:2000:~/.config/scripts/zscroll.sh}}"
+               on_click_left = "mpc toggle"
+               on_scroll_down = "mpc next"
+               on_scroll_up = "mpc prev"
+           }
+       ]
+   }
+
+
+   $clock2 = {
+    type = "custom"
+    bar = [
+        {
+            type = "box"
+            class = "clock-container"
+            orientation = "vertical"
+            valign = "center"
+            widgets = [
+                {
+                    type = "label"
+                    class = "clock-time"
+                    label = " {{1000:date +'%H:%M:%S'}}"
+                }
+                {
+                    type = "label"
+                    class = "clock-date"
+                    label = "{{60000:date +'%A, %B %d'}}"
+                }
+            ]
+        }
+    ]
+}
+
+$workspacename = {
+    type = "custom"
+    bar = [
+        {
+            type = "box"
+            class = "workspace-container"
+            orientation = "vertical"
+            valign = "center"
+            widgets = [
+                {
+                    type = "label"
+                    class = "workspace-name"
+                    label = "{{watch:2000:~/.config/ipc-scripts/active_name.py}}"
+                }
+                {
+                    type = "label"
+                    class = "workspace-number"
+                    label = "Desktop {{watch:2000:~/.config/ipc-scripts/active_workspace.py}}"
+                }
+            ]
+        }
+    ]
+}
+
+    $start = [ $zscroll $workspacename $title ]
+    $center = [ $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 ]
+    $end = [ $airpod $keyboard $SysMem $SysTemp $SysCpu $SysDisk $pacman $volume $clock2 $wlogout ]
+}
+
+in {
+
+        icon_theme = "Tela-circle-nord"
+        position = "top"
+        start = $start
+        center = $center
+        end = $end
+}
