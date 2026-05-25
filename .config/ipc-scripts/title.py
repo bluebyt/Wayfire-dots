@@ -18,8 +18,8 @@ def get_title():
 
 def monitor_focus():
     socket = WayfireSocket()
-    # Tell Wayfire we want to listen to view events
-    socket.watch(['view-focused'])
+   # Watch for both focus changes and title updates
+    socket.watch(['view-focused', 'view-title-changed'])
     
     # Print the initial title
     print(get_title())
