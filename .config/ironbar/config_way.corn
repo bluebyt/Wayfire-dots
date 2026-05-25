@@ -27,6 +27,30 @@ let {
            }
        ]
    }
+
+      $clock2 = {
+          type = "custom"
+          bar = [
+           {
+            type = "box"
+            class = "clock-container"
+            orientation = "vertical"
+            valign = "center"
+            widgets = [
+                {
+                    type = "label"
+                    class = "clock-time"
+                    label = " {{1000:date +'%H:%M:%S'}}"
+                }
+                {
+                    type = "label"
+                    class = "clock-date"
+                    label = "{{60000:date +'%A, %B %d'}}"
+                }
+            ]
+        }
+    ]
+}
     $volume = {
       type = "volume"
       format = "{icon} {percentage}%"
@@ -54,7 +78,6 @@ let {
            }
        ]
    }
-
     $SysDisk = {
       type = "sys_info"
       class = "sys-disk"
@@ -62,7 +85,6 @@ let {
       format = [ " {disk_percent@/}%" ]
       tooltip = "{{~/.config/ironbar/scripts/disk_usage.sh}}"
    }
-
     $SysCpu = {
       type = "sys_info"
       class = "sys-cpu"
@@ -70,13 +92,25 @@ let {
       format = [ " {cpu_percent}%" ]
       tooltip = "CPU usage"
     }
-
+    $cpu = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "cpu"
+               class = "cpu"
+               label = " {{1000:~/.config/scripts/cpu}}"
+               on_click_left = "~/.config/scripts/toggle-btm.sh"
+               tooltip = "{{python3 ~/.config/ironbar/scripts/cpu-tooltip.py --tooltip}}"
+           }
+       ]
+   }
     $SysTemp = {
       type = "sys_info"
       class = "sys-temp"
       interval.temps = 3
       format = [ " {temp_c:coretemp-Package-id-0}°C" ]
-      tooltip = "Temp usage"
+      tooltip = "{{python3 ~/.config/ironbar/scripts/cpu_temp.py --tooltip}}"
      }
 
     $SysMem = {
@@ -84,31 +118,24 @@ let {
        class = "sys-mem"
        interval.memory = 30
        format = [ " {memory_percent}%" ]
-       tooltip = "Memory usage"
-    }
-
-   $keyboard = {
+       tooltip = "{{~/.config/ironbar/scripts/mem_tooltip.py --tooltip}}"
+   }
+    $keyboard = {
+            type = "keyboard"
+            show_scroll = false
+            icons.layout_map.'English (intl., with AltGr dead keys)' = " en"
+            icons.layout_map.'French (Canada)' = " fr"
+}
+      $airpod = {
        type = "custom"
        bar = [
            {
                type = "button"
-               name = "keyboard"
-               class = "keyboard"
+               name = "airpod"
+               class = "airpod"
                mode = "watch"
-               label = " {{100:~/.config/ipc-scripts/keyboard_layout.py}}"
-               on_click = "!~/.config/ipc-scripts/keyboard_layout_toggle.py"
-           }
-       ]
-   }
-
-   $title = {
-      type = "custom"
-       bar = [
-          {
-               type = "label"
-               name = "title"
-               class = "title"
-               label = " {{watch:2000:~/.config/ipc-scripts/title.py}}"
+               label = "{{2000:~/.config/scripts/airpod.sh --status}}"
+               on_click = "!~/.config/scripts/airpod.sh --toggle"
            }
        ]
    }
@@ -247,6 +274,18 @@ let {
         ]
     }
 
+   $title = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "title"
+               class = "title"
+               label = " {{watch:2000:~/.config/ipc-scripts/title_test.py}}"
+           }
+       ]
+   }
+
     $weather = {
         name = "weather"
         type = "script"
@@ -255,19 +294,7 @@ let {
         cmd = "~/.config/ironbar/scripts/weather"
    }
 
-      $airpod = {
-       type = "custom"
-       bar = [
-           {
-               type = "button"
-               name = "airpod"
-               class = "airpod"
-               mode = "watch"
-               label = "{{2000:~/.config/scripts/airpod.sh --status}}"
-               on_click = "!~/.config/scripts/airpod.sh --toggle"
-           }
-       ]
-   }
+
 
      $cava = {
         transition_type = "slide_end"
@@ -319,29 +346,7 @@ let {
    }
 
 
-   $clock2 = {
-    type = "custom"
-    bar = [
-        {
-            type = "box"
-            class = "clock-container"
-            orientation = "vertical"
-            valign = "center"
-            widgets = [
-                {
-                    type = "label"
-                    class = "clock-time"
-                    label = " {{1000:date +'%H:%M:%S'}}"
-                }
-                {
-                    type = "label"
-                    class = "clock-date"
-                    label = "{{60000:date +'%A, %B %d'}}"
-                }
-            ]
-        }
-    ]
-}
+
 
 $workspacename = {
     type = "custom"
@@ -362,14 +367,26 @@ $workspacename = {
                     class = "workspace-number"
                     label = "Desktop {{watch:2000:~/.config/ipc-scripts/active_workspace.py}}"
                 }
-            ]
+            ] 
         }
     ]
-}
+}   
+      $ram = {
+      type = "custom"
+       bar = [
+          {
+               type = "label"
+               name = "ram"
+               class = "ram"
+               label = " {{2000:~/.config/ironbar/scripts/mem_percent.py}}"
+               tooltip = "{{~/.config/ironbar/scripts/mem_tooltip.py --tooltip}}"
+           }
+       ]
+   }
 
     $start = [ $zscroll $workspacename $title ]
     $center = [ $work1 $work2 $work3 $work4 $work5 $work6 $work7 $work8 $work9 ]
-    $end = [ $airpod $keyboard $SysMem $SysTemp $SysCpu $SysDisk $pacman $volume $clock2 $wlogout ]
+    $end = [ $airpod $keyboard $SysMem $SysTemp $cpu $SysDisk $pacman $volume $clock2 $wlogout ]
 }
 
 in {

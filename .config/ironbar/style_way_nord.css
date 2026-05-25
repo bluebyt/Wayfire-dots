@@ -103,6 +103,7 @@
     box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
 
+/*
 #custom-keyboard-layout,
 #custom-airpod,
 #temperature,
@@ -116,6 +117,7 @@
     box-shadow: none;
     padding: 0 9px;
 }
+*/
 
 .cava {
     padding: 0px 20px;
@@ -152,7 +154,7 @@
 }
 
 .volume {
-    padding: 0px 10px;
+    padding: 0px 0px; 
     margin-top: 5px;
     margin-bottom: 15px;
     margin-right: 7px;
@@ -162,8 +164,9 @@
     background: #2e3440;
     opacity: 0.8;
 }
+
 .popup-volume {
-    padding: 20px 20px 20px 20px;
+    padding: 0px 0px 0px 0px;
     border-radius: 10px;
     color: #81a1c1;
     background-color: rgba(46, 52, 64, 0.8);
@@ -498,4 +501,28 @@ tooltip * {
     font-size: 0.55em;
     font-weight: bold;
     color: #a3be8c;
+}
+
+.cpu {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+    border-radius: 10px;
+    color: #b48ead;
+    background: #2e3440;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+}
+
+.ram {
+    padding: 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 7px;
+    border-radius: 10px;
+    color: #88c0d0;
+    background: #2e3440;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
 }
