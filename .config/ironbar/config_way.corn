@@ -121,11 +121,18 @@ let {
        tooltip = "{{~/.config/ironbar/scripts/mem_tooltip.py --tooltip}}"
    }
     $keyboard = {
-            type = "keyboard"
-            show_scroll = false
-            icons.layout_map.'English (intl., with AltGr dead keys)' = " en"
-            icons.layout_map.'French (Canada)' = " fr"
-}
+       type = "custom"
+       bar = [
+           {
+               type = "button"
+               name = "keyboard"
+               class = "keyboard"
+               mode = "watch"
+               label = " {{100:~/.config/ipc-scripts/keyboard_layout.py}}"
+               on_click = "!~/.config/ipc-scripts/keyboard_layout_toggle.py"
+           }
+       ]
+   }
       $airpod = {
        type = "custom"
        bar = [
