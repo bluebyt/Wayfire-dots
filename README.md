@@ -8,8 +8,6 @@ Wayfire is a 3D Wayland compositor
 ![screenshot_wayfire_2_dec_2024ver2](https://github.com/user-attachments/assets/6ce465da-e8a9-45d5-a87c-8932cd7ae366)
 
 ## Screenshot with a mix of GTK4 apps and Pixdecor 
-<img width="2880" height="1800" alt="wayfire_screenshot_23-12-2025" src="https://github.com/user-attachments/assets/c0f3be7a-3b1f-4718-a240-18c7879c4fcd" />
-
 <img width="3000" height="1688" alt="test3" src="https://github.com/user-attachments/assets/bb053751-d525-4b5d-b9af-9d1be6c9affd" />
 
 
