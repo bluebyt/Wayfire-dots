@@ -10,6 +10,8 @@ Wayfire is a 3D Wayland compositor
 ## Screenshot with a mix of GTK4 apps and Pixdecor 
 <img width="2880" height="1800" alt="wayfire_screenshot_23-12-2025" src="https://github.com/user-attachments/assets/c0f3be7a-3b1f-4718-a240-18c7879c4fcd" />
 
+<img width="3840" height="2160" alt="test" src="https://github.com/user-attachments/assets/1a889392-5387-451e-b387-b96c9b0d584e" />
+
 
 [Install Wayfire on Youtubes](https://youtu.be/abtU54uMXH0)
 
